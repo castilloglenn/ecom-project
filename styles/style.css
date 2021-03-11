@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*
+SNOW = FFFBFE (NAV BACKG)
+GRAY WEB = 7A7D7D
+LIGHT GRAY = D0CFCF 
+DARK LIVER = 565254 (FONTS)
+WHITE = FFFFFF
+*/
+
+body {
+    padding: 0 5%;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFFFF;
+}
+
+nav ul {
+    background-color: #565254;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+nav img {
+    padding: 5px 0;
+}
+
+nav li {
+    color: #FAFAFA;
+    display: inline;
+    vertical-align: middle;
+    float: right;
+    padding: 20px 0;
+}
+
+nav li:first-child {
+    float: left;
+}
+
+nav li a {
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px 20px;
+}
+
+nav li a:hover {
+    color: #FFFFFF;
+    background-color: #565254;
+    transition: 0.25s;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #28262C;
+    color: #FAFAFA;
+    min-width: 120px;
+    text-align: center;
+    z-index: 1;
+}
+
+#dropdown {
+    position: relative;
+}
+
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+
+#banner {
+    width: 100%;
+}
