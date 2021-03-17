@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
 @media all and (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
 	/* .navbar .nav-item:hover .nav-link{ color: #fff;  } */
