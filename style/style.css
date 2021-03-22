@@ -8,6 +8,10 @@ body {
 	border: none;
 }
 
+.card-footer {
+	margin: 0 5px;
+}
+
 
 @media all and (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
