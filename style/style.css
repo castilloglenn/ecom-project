@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -18,4 +24,308 @@ body {
 	/* .navbar .nav-item:hover .nav-link{ color: #fff;  } */
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
 	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+.bestseller-title
+{
+	
+	border-left: 10px solid #2296f0
+}
+
+.bestselling-mouse
+{
+	
+	width: 255px;
+    height: 265px;
+    background-color:  white;
+    
+    float: left;
+    padding: 1px;
+   
+	
+}
+
+.product-name
+{
+	margin-top: 10px;
+	margin-left: 5px;
+	color: black;
+	font: 300 18px/20px "RazerF5", Helvetica, Arial;
+	font-weight: bold ;
+	
+}
+
+.product-price
+{
+	margin-left: 5px;
+}
+
+.product-heading
+{
+	
+	border-left: 10px solid #2296f0
+}
+
+.gaming-grade-mouse /* Gaming Mices Csss */
+{
+	width: 255px;
+    height: 250px;
+    background-color:  white;
+    color: black;
+    float: left;
+    padding: 1px;
+}
+														/*CSS NG Container Product*/
+
+.prod-name{
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+.prod-price{
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.prod-description{
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.prod-info{
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.product-info{
+	list-style-type: none;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+
+.product-column{
+	margin-left: 150px;
+}													
+
+.size-selection{
+	width: 300px;
+	height: 30px;
+	font-family: Arial;
+	font-size: 20px;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.size{
+	font-family:'Courier New', Courier, monospace;
+	font-size: 20px;
+}
+
+.quantity{
+	font: normal normal normal 14px/1.4em raleway,sans-serif;
+	padding-left: 1px;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	height: 30px;
+	font-size: 20px;
+	width: 100px;
+}
+
+
+.addtocart{
+	border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 250px;
+  font-size: 18px;
+}
+
+.addtocart:hover{
+	opacity: 0.7;
+}
+
+														/*End ofCSS NG Container Product*/
+
+														/*CSS ng Checkout*/
+.checkout-form{
+	padding-top: 50px;
+}
+
+.checkout-form .container{
+	border: 2px; 
+	border-style: solid;
+	padding-bottom: 10px;
+}
+
+.checkout-form .container .form-column{
+	margin-left: 10px; 
+	margin-top: 5px;
+	display: inline;
+	
+}
+
+.poweredby{
+	font-size: 15px;
+}
+
+.user-forms{
+	margin-top: 10px;
+
+	border-top: 1px solid;
+	padding-top: 15px;
+	
+
+
+}
+
+.bi-info-circle-fill{
+	font-size: 20px;
+}
+
+input[type = text] {
+  margin: 8px 0;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 50%;
+  height: 35px;
+}
+
+
+::placeholder{				/*Placeholding text ng mga forms*/
+padding-left: 10px;
+}
+
+ table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  align-items: center;
+
+}
+
+.container.shipping td,th,tr{
+	border: 1px solid #dddddd;
+	text-align: center;
+	padding: 8px;
+	width: 25%;
+}
+
+.btnCheckout{
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 250px;
+  font-size: 18px;
+}
+
+.btnCheckout:hover{
+	opacity: 0.7;
+}
+
+
+														/*End of CSS NG CHECKOUT*/
+
+														/*CSS NG FOOTER START DITO*/
+.footer{
+	background-color: #c8cacc;
+	padding: 50px;
+}
+
+
+.Socials{
+	padding-top: 20px;
+	list-style: none;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+.Socials a{
+	color: #2296f0;
+	text-decoration: none;
+	font-size: 20px;
+	
+	box-sizing: border-box;
+	width: 50px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.social-heading{
+	font-weight: bold;
+	font-size: 25px;
+	color: black;
+	text-transform: capitalize;
+}
+
+.social-heading::after{
+	content: "";
+	display: block;
+	width: 25%;
+	border-bottom: 5px solid #2296f0;
+}
+
+.useful-heading{
+	font-weight: bold;
+	font-size: 25px;
+	color: black;
+	text-transform: capitalize;
+}
+
+.useful-heading::after{
+	content: "";
+	display: block;
+	width: 25%;
+	border-bottom: 5px solid #2296f0;
+}
+
+.partnership-heading{
+	font-weight: bold;
+	font-size: 25px;
+	color: black;
+	text-transform: capitalize;
+}
+
+.partnership-heading::after{
+	content: "";
+	display: block;
+	width: 35%;
+	border-bottom: 5px solid #2296f0;
+}
+
+.product-links{
+	padding-top: 20px;
+	text-decoration: none;
+	list-style: none;
+}
+
+.product-links a{
+	color: #2296f0;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 30px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul.logos{
+	padding-top: 20px;
+	list-style: none;
+}
+
+.closing{
+	border-top: 5px solid #2296f0;
+	padding-top: 20px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bold;
+	color: black;
+}
+
+.Socials a:hover{
+	color: white;	
+}
+
+.product-links a:hover{
+	color: white;
 }
