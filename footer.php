@@ -1,15 +1,14 @@
 <section style="margin-top: 100px;">
 		<footer class="footer">
-
 			<div class="container">
-				
 				<div class="row">
-
 					<div class="col-lg-3">
-						<img src="./img/pb.png" alt="PulseBytes Logo" height="50">
-						<br>
-						<br>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam nulla fugit quos excepturi ducimus hic, tenetur maiores corporis quidem, est dignissimos voluptas, laboriosam omnis modi quo accusantium consequuntur quasi facilis!</p>
+						<img src="./img/pb.png" alt="PulseBytes Logo" height="50"> <br> <br>
+						<p>2021 is another tough year for everyone of us. But Now PulseBytes 
+                            is here we will make Quarantine interesting. Our product designs 
+                            will attract customers attention and make sure that our product will 
+                            satisfy customer's likings. We ensure that our Product and people is 
+                            100% Covid free, before we deliver it to your home.</p>
 					</div>
 
 					<div class="col-lg-3">
@@ -19,8 +18,6 @@
 							<a href="#"><li><img src="./img/twitter.png" alt="Facebook icon" height="30" width="30" >  Twitter</li></a>
 							<a href="#"><li><img src="./img/yt.png" alt="Facebook icon" height="30" width="30" >  Youtube</li></a>
 						</ul>
-						
-						
 					</div>
 
 					<div class="col-lg-3">
@@ -37,9 +34,9 @@
 					<div class="col-lg-3">
 						<h2 class="partnership-heading">In Partnership With</h2>
 						<ul class="logos">
-							<li><img src="./img/logo/razer.png" alt=""></li>
-							<li><img src="./img/logo/acer.png" alt=""></li>
-							<li><img src="./img/logo/steel-series.png" alt=""></li>
+							<li><img src="./img/logo/razerr.png" alt="Razer"></li> <br>
+							<li><img src="./img/logo/steel-series.png" alt="Steel Series"></li> <br>
+							<li><img src="./img/logo/acer.png" alt="Acer"></li> <br>
 						</ul>
 					</div>
 				</div>
