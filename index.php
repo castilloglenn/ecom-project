@@ -1,32 +1,35 @@
 <?php
-	require_once("includes/dbstart.inc.php");
     require_once("header.php");
 ?>
                     <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link" href="index.php">Login/Register</a>
+							<a class="nav-link" href="login.php">Login/Register</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="#">Home</a>
+							<a class="nav-link active" href="index.php">Home</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 								data-bs-toggle="dropdown" aria-expanded="false"> Categories
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="tShirt.html">T-Shirt</a></li>
-								<li><a class="dropdown-item" href="jacket.html">Jacket</a></li>
-								<li><a class="dropdown-item" href="mug.html">Mug</a></li>
+								<li><a class="dropdown-item" href="tshirt.php">T-Shirt</a></li>
+								<li><a class="dropdown-item" href="jacket.php">Jacket</a></li>
+								<li><a class="dropdown-item" href="mug.php">Mug</a></li>
 								<li>
 									<hr class="dropdown-divider">
 								</li>
-								<li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
-								<li><a class="dropdown-item" href="keyboard.html">Keyboard</a></li>
+								<li><a class="dropdown-item" href="mouse.php">Mouse</a></li>
+								<li><a class="dropdown-item" href="keyboard.php">Keyboard</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Checkout
-								<span class="badge rounded-pill bg-primary">0</span>
+								<span class="badge rounded-pill bg-primary">
+									<?php
+										echo $_SESSION['cart'];
+									?>
+								</span>
 							</a>
 						</li>
 					</ul>

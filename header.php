@@ -1,6 +1,8 @@
 <?php 
     session_start();
-    $_SESSION['name'] = 'GUEST';
+    $_SESSION['name'] = (isset($_SESSION['name'])) ? $_SESSION['name'] : 'GUEST';
+    $_SESSION['cart'] = (isset($_SESSION['cart'])) ? $_SESSION['cart'] : 0;
+	require_once("includes/dbstart.inc.php");
 ?>
 
 <!doctype html>
