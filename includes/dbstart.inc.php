@@ -23,4 +23,6 @@ if ($result->num_rows > 0) {
 
 if (!$flagged) {
     include('dbinit.inc.php');
+} else {
+    $conn -> query("USE ecommerce");
 }
