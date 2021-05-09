@@ -1,4 +1,4 @@
-<section style="margin-top: 100px;">
+	<section style="margin-top: 50px;">
 		<footer class="footer">
 			<div class="container">
 				<div class="row">

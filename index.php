@@ -1,7 +1,7 @@
 <?php
+	require_once("includes/dbstart.inc.php");
     require_once("header.php");
 ?>
-
                     <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
 						<li class="nav-item">
 							<a class="nav-link" href="index.php">Login/Register</a>
@@ -9,17 +9,31 @@
 						<li class="nav-item">
 							<a class="nav-link active" href="#">Home</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Shop</a>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false"> Categories
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="tShirt.html">T-Shirt</a></li>
+								<li><a class="dropdown-item" href="jacket.html">Jacket</a></li>
+								<li><a class="dropdown-item" href="mug.html">Mug</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+								<li><a class="dropdown-item" href="keyboard.html">Keyboard</a></li>
+							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Checkout</a>
+							<a class="nav-link" href="#">Checkout
+								<span class="badge rounded-pill bg-primary">0</span>
+							</a>
 						</li>
 					</ul>
-					<form class="d-flex">
+					<!-- <form class="d-flex">
 						<input class="form-control me-2" type="search" placeholder="Find products..." aria-label="Search">
 						<button class="btn btn-outline-secondary" type="submit">Search</button>
-					</form>
+					</form> -->
 				</div>
 			</div>
 		</nav>
@@ -47,13 +61,12 @@
 					<div class="card-body">
 					</div>
 					<div class="card-footer">
-						<h5 class="card-title">
-							I Love Programming Tee
-						</h5>
+						<h5 class="card-title">I Love Programming Tee</h5>
 						<h5 class="card-title">₱300.00</h5>
 						<small>
 							Our very own programmer Glenn tshirt along with his favorite quotation.
 						</small>
+						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 				<div class="card">
@@ -66,6 +79,7 @@
 						<small>
 							You will probably love an iron golem providing you with some extra ram boost.
 						</small>
+						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 				<div class="card">
@@ -78,14 +92,13 @@
 						<small>
 							Tayo ay nakatira sa isang LIPUNAN. Ernest's favorite line ever. Comes in a purple shirt.
 						</small>
+						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-    <!-- END OF FEATURED PRODUCTS -->
 
-	<!-- FEATURED PRODUCTS -->
 	<section>
 		<div class="container mt-5">
 			<div class="card-group text-center">
@@ -99,6 +112,7 @@
 						<small>
 							Tayo ay nakatira sa isang LIPUNAN. Ernest's favorite line ever. Comes in a black shirt.
 						</small>
+						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 				<div class="card">
@@ -111,6 +125,7 @@
 						<small>
 							Our very own programmer Glenn tshirt along with his favorite quotation.
 						</small>
+						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 				<div class="card">
@@ -123,6 +138,7 @@
 						<small>
 							Our very own programmer Glenn tshirt along with his favorite quotation.
 						</small>
+						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 			</div>

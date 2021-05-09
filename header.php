@@ -1,6 +1,10 @@
+<?php 
+    session_start();
+    $_SESSION['name'] = 'GUEST';
+?>
+
 <!doctype html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +23,7 @@
             <!-- NAVIGATION PANEL -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.php">
                         <img src="./img/pb.png" alt="PulseBytes" width="150">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
