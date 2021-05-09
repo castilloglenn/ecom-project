@@ -69,7 +69,7 @@
 						<small>
 							Our very own programmer Glenn tshirt along with his favorite quotation.
 						</small>
-						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
+						<p><a href="includes/addtocart.inc.php?id=2&link=index.php" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 				<div class="card">
@@ -82,7 +82,7 @@
 						<small>
 							You will probably love an iron golem providing you with some extra ram boost.
 						</small>
-						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
+						<p><a href="includes/addtocart.inc.php?id=3&link=index.php" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 				<div class="card">
@@ -95,7 +95,7 @@
 						<small>
 							Tayo ay nakatira sa isang LIPUNAN. Ernest's favorite line ever. Comes in a purple shirt.
 						</small>
-						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
+						<p><a href="includes/addtocart.inc.php?id=4&link=index.php" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 			</div>
@@ -115,7 +115,7 @@
 						<small>
 							Tayo ay nakatira sa isang LIPUNAN. Ernest's favorite line ever. Comes in a black shirt.
 						</small>
-						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
+						<p><a href="includes/addtocart.inc.php?id=1&link=index.php" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 				<div class="card">
@@ -128,7 +128,7 @@
 						<small>
 							White mug y'all.
 						</small>
-						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
+						<p><a href="includes/addtocart.inc.php?id=6&link=index.php" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 				<div class="card">
@@ -141,7 +141,7 @@
 						<small>
 							Black mug y'all.
 						</small>
-						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
+						<p><a href="includes/addtocart.inc.php?id=5&link=index.php" class="badge bg-primary">Add to Cart</a></p>
 					</div>
 				</div>
 			</div>

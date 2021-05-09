@@ -14,20 +14,20 @@
 					<div class="col-lg-3">
 						<h2 class="social-heading">Social Links</h2>
 						<ul class="Socials">
-							<a href="#"><li><img src="./img/fb.png" alt="Facebook icon" height="30" width="30" >  Facebook</li></a>
-							<a href="#"><li><img src="./img/twitter.png" alt="Facebook icon" height="30" width="30" >  Twitter</li></a>
-							<a href="#"><li><img src="./img/yt.png" alt="Facebook icon" height="30" width="30" >  Youtube</li></a>
+							<a href="https://www.facebook.com/RickAstley" target="_blank"><li><img src="./img/fb.png" alt="Facebook icon" height="30" width="30" >  Facebook</li></a>
+							<a href="https://twitter.com/rickastley?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><li><img src="./img/twitter.png" alt="Facebook icon" height="30" width="30" >  Twitter</li></a>
+							<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><li><img src="./img/yt.png" alt="Facebook icon" height="30" width="30" >  Youtube</li></a>
 						</ul>
 					</div>
 
 					<div class="col-lg-3">
 						<h2 class="useful-heading">Useful Links</h2>
 						<ul class="product-links">
-							<li><a href="tShirt.html">T-Shirts</a></li>
-							<li><a href="jacket.html">Jackets</a></li>
-							<li><a href="mug.html">Mugs</a></li>
-							<li><a href="keyboard.html">Gaming Keyboard</a></li>
-							<li><a href="mouse.html">Gaming Mouse</a></li>
+							<li><a href="tshirt.php">T-Shirts</a></li>
+							<li><a href="jacket.php">Jackets</a></li>
+							<li><a href="mug.php">Mugs</a></li>
+							<li><a href="keyboard.php">Gaming Keyboard</a></li>
+							<li><a href="mouse.php">Gaming Mouse</a></li>
 						</ul>
 					</div>
 
