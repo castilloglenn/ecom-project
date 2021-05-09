@@ -24,7 +24,7 @@
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Checkout
+							<a class="nav-link" href="#">Cart
 								<span class="badge rounded-pill bg-primary">
 									<?php
 										echo $_SESSION['cart'];
@@ -66,7 +66,7 @@
                 <div class="col-sm">
                     <img class="img-fluid" src="./img/products/Tshirt/glenn-t.png" alt="Thumbnail image" width="300">
                     <h5 class="product-name">I Love Programming Tee</h5>
-                    <span class="product-price">₱ 1000.00 </span>
+                    <span class="product-price">₱ 300.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -78,7 +78,7 @@
                 <div class="col-sm">
                     <img class="img-fluid" src="./img/products/Tshirt/seb-t.png" alt="Thumbnail image" width="300">
                     <h5 class="product-name">Ram Provider Iron Golem Tee</h5>
-                    <span class="product-price">₱ 1000.00 </span>
+                    <span class="product-price">₱ 300.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -91,7 +91,7 @@
                 <div class="col-sm">
                     <img class="img-fluid" src="./img/products/Tshirt/p-ernest-t.png" alt="Thumbnail image" width="300">
                     <h5 class="product-name">Lipunan Tee</h5>
-                    <span class="product-price">₱ 1000.00 </span>
+                    <span class="product-price">₱ 300.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -121,7 +121,7 @@
                     <div class="shirts">
                         <img class="img-fluid" src="./img/products/Tshirt/1black.jpg" alt="Thumbnail image">
                         <h5 class="product-name">Every Programmer is an Author - Black</h5>
-                        <span class="product-price">₱ 750.00 </span>
+                        <span class="product-price">₱ 200.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -137,7 +137,7 @@
                     <div class="shirts">
                         <img class="img-fluid" src="./img/products/Tshirt/1lb.jpg" alt="Thumbnail image">
                         <h5 class="product-name">Every Programmer is an Author - Light Blue</h5>
-                        <span class="product-price">₱ 750.00 </span>
+                        <span class="product-price">₱ 200.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -153,7 +153,7 @@
                     <div class="shirts">
                         <img class="img-fluid" src="./img/products/Tshirt/1red.jpg" alt="Thumbnail image">
                         <h5 class="product-name">Every Programmer is an Author - Red</h5>
-                        <span class="product-price">₱ 750.00 </span>
+                        <span class="product-price">₱ 200.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -169,7 +169,7 @@
                     <div class="shirts">
                         <img class="img-fluid" src="./img/products/Tshirt/1white.jpg" alt="Thumbnail image">
                         <h5 class="product-name">Every Programmer is an Author - White</h5>
-                        <span class="product-price">₱ 750.00 </span>
+                        <span class="product-price">₱ 200.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -185,7 +185,7 @@
                     <div class="shirts">
                         <img class="img-fluid" src="./img/products/Tshirt/1yg.jpg" alt="Thumbnail image">
                         <h5 class="product-name">Every Programmer is an Author - Yellow Green</h5>
-                        <span class="product-price">₱ 750.00 </span>
+                        <span class="product-price">₱ 200.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -209,7 +209,7 @@
                     <div class="shirts">
                         <img class="img-fluid" src="./img/products/Tshirt/2lb.jpg" alt="Thumbnail image">
                         <h5 class="product-name">God is Real Unless Declared - Light Blue </h5>
-                        <span class="product-price">₱ 750.00 </span>
+                        <span class="product-price">₱ 200.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -223,7 +223,7 @@
                     <div class="shirts">
                         <img class="img-fluid" src="./img/products/Tshirt/2red.jpg" alt="Thumbnail image">
                         <h5 class="product-name">God is Real Unless Declared - Red </h5>
-                        <span class="product-price">₱ 750.00 </span>
+                        <span class="product-price">₱ 200.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -237,7 +237,7 @@
                     <div class="shirts">
                         <img class="img-fluid" src="./img/products/Tshirt/2yg.jpg" alt="Thumbnail image">
                         <h5 class="product-name">God is Real Unless Declared - Yellow Green </h5>
-                        <span class="product-price">₱ 750.00 </span>
+                        <span class="product-price">₱ 200.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -251,7 +251,7 @@
                     <div class="shirts">
                         <img class="img-fluid" src="./img/products/Tshirt/2black.jpg" alt="Thumbnail image">
                         <h5 class="product-name">God is Real Unless Declared - Black </h5>
-                        <span class="product-price">₱ 750.00 </span>
+                        <span class="product-price">₱ 200.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -265,7 +265,7 @@
                     <div class="shirts">
                         <img class="img-fluid" src="./img/products/Tshirt/2white.jpg" alt="Thumbnail image">
                         <h5 class="product-name">God is Real Unless Declared - White </h5>
-                        <span class="product-price">₱ 750.00 </span>
+                        <span class="product-price">₱ 200.00 </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -288,7 +288,7 @@
                 <div class="shirts">
                     <img class="img-fluid" src="./img/products/Tshirt/3white.jpg" alt="Thumbnail image">
                     <h5 class="product-name">Coffee Lover Programmer - White </h5>
-                    <span class="product-price">₱ 750.00 </span>
+                    <span class="product-price">₱ 200.00 </span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -303,7 +303,7 @@
                 <div class="shirts">
                 <img class="img-fluid" src="./img/products/Tshirt/3black.jpg" alt="Thumbnail image">
                 <h5 class="product-name">Coffee Lover Programmer - Black </h5>
-                <span class="product-price">₱ 750.00 </span>
+                <span class="product-price">₱ 200.00 </span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -318,7 +318,7 @@
                 <div class="shirts">
                 <img class="img-fluid" src="./img/products/Tshirt/3red.jpg" alt="Thumbnail image">
                 <h5 class="product-name">Coffee Lover Programmer - Red </h5>
-                <span class="product-price">₱ 750.00 </span>
+                <span class="product-price">₱ 200.00 </span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -333,7 +333,7 @@
                 <div class="shirts">
                 <img class="img-fluid" src="./img/products/Tshirt/3lb.jpg" alt="Thumbnail image">
                 <h5 class="product-name">Coffee Lover Programmer - Light Blue </h5>
-                <span class="product-price">₱ 750.00 </span>
+                <span class="product-price">₱ 200.00 </span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path
@@ -348,7 +348,7 @@
                 <div class="shirts">
                 <img class="img-fluid" src="./img/products/Tshirt/3yg.jpg" alt="Thumbnail image">
                 <h5 class="product-name">Coffee Lover Programmer - Yellow Green </h5>
-                <span class="product-price">₱ 750.00 </span>
+                <span class="product-price">₱ 200.00 </span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-caret-right" viewBox="0 0 16 16">
                                 <path

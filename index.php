@@ -24,7 +24,7 @@
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Checkout
+							<a class="nav-link" href="#">Cart
 								<span class="badge rounded-pill bg-primary">
 									<?php
 										echo $_SESSION['cart'];
@@ -126,7 +126,7 @@
 						<h5 class="card-title">Pulse Bytes Mug (White)</h5>
 						<h5 class="card-title">₱150.00</h5>
 						<small>
-							Our very own programmer Glenn tshirt along with his favorite quotation.
+							White mug y'all.
 						</small>
 						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
 					</div>
@@ -139,7 +139,7 @@
 						<h5 class="card-title">Pulse Bytes Mug (Black)</h5>
 						<h5 class="card-title">₱150.00</h5>
 						<small>
-							Our very own programmer Glenn tshirt along with his favorite quotation.
+							Black mug y'all.
 						</small>
 						<p><a href="#" class="badge bg-primary">Add to Cart</a></p>
 					</div>

@@ -24,7 +24,7 @@
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Checkout
+							<a class="nav-link" href="#">Cart
 								<span class="badge rounded-pill bg-primary">
 									<?php
 										echo $_SESSION['cart'];
@@ -160,7 +160,7 @@
                     <div class="hoodies">
                         <img class="img-fluid" src="./img/products/hoodies/eatsleepprogramrepeatyg.jpg"
                             alt="Thumbnail image">
-                        <h5 class="product-name">Eat Sleep Program Repeat Black</h5>
+                        <h5 class="product-name">Eat Sleep Program Repeat Yellow Green</h5>
                         <span class="product-price">₱ 1,999.00</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-caret-right" viewBox="0 0 16 16">
