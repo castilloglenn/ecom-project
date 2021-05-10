@@ -24,7 +24,7 @@
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="#">Cart
+							<a class="nav-link active" href="#">View Cart
 								<span class="badge rounded-pill bg-primary">
 									<?php
 										echo $_SESSION['cart'];
@@ -46,49 +46,69 @@
 	<div class="container h-100">
 		<br>
 		<h3><i class="fas fa-shopping-basket"></i>  Shopping Cart</h3>
+		<?php
+			if (!isset($_SESSION['cartlist']) || sizeof($_SESSION['cartlist']) === 0) {
+				echo "
+				<center style=\"margin-top: 125px; margin-bottom: 200px;\">
+					<h2>No item(s) to display..</h2><h2>Add some items on the store!</h2>
+				</center>";
+			} else {
+				echo " <br>
+					<div class=\"row h-100 justify-content-center align-items-center text-center\">
+						<div class=\"col-md-3 border\"><b>Preview</b></div>
+						<div class=\"col-md-3 border\"><b>Name</b></div>
+						<div class=\"col-md-2 border\"><b>Price</b></div>
+						<div class=\"col-md-2 border\"><b>Quantity</b></div>
+						<div class=\"col-md-2 border\"><b>Adjustment</b></div>
+					</div>";
+				$total_price = 0;
+				foreach ($_SESSION['cartlist'] as $row) {
+					echo " <br>
+					<div class=\"row border h-100 justify-content-center align-items-center text-center\">
+						<div class=\"col-md-3\">
+							<img src=\"".$row["image"]."\" width=150>
+						</div>
 
-		<!-- Items -->
-		<div class="row border rounded border-2 border-secondary h-100 justify-content-center align-items-center text-center">
-			<div class="col-md-3">
-				<img src="./img/products/Mug/g3.jpg" width=150>
-			</div>
+						<div class=\"col-md-3\">
+							<b>".$row["name"]."</b>
+						</div>
 
-			<div class="col-md-3">
-				<b class="pName">White Mug</b>
-			</div>
+						<div class=\"col-md-2\">
+							<b>&#x20b1 ".number_format($row["price"], 2, '.', ',')."</b>
+						</div>
 
-			<div class="col-md-3">
-				<b class="pPrice">P 100.00</b>
-			</div>
+						<div class=\"col-md-2\">
+							<b>".$row["quantity"]."</b>
+						</div>
 
-			<div class="col-md-3">
-				<a href="" class="btn btn-danger">Remove Item</a>
-			</div>
-		</div>
+						<div class=\"col-md-2\">
+							<a href=\"includes/addtocart.inc.php?id=".$row['id']."&link=cart.php\" class=\"btn btn-success\">+</a>
+							<a href=\"includes/decrease.inc.php?name=".$row['name']."&link=cart.php\" class=\"btn btn-danger\">-</a>
+						</div>
+					</div>";
+					$total_price = $total_price + ($row["price"] * $row["quantity"]);
+				}
+				
+				echo " <br>
+					<div class=\"row h-100 justify-content-center align-items-center text-center\">
+						<div class=\"col-md-12\">
+							<h4>Total: &#x20b1 ".number_format($total_price, 2, '.', ',')."</h4>
+						</div>
+					</div>";
 
-		<div class="row border rounded border-top-0 border-2 border-secondary h-100 justify-content-center align-items-center text-center">
-			<div class="col-md-3">
-				<img src="./img/products/Mug/g3.jpg" width=150>
-			</div>
-
-			<div class="col-md-3">
-				<b class="pName">White Mug</b>
-			</div>
-
-			<div class="col-md-3">
-				<b class="pPrice">P 100.00</b>
-			</div>
-
-			<div class="col-md-3">
-				<a href="" class="btn btn-danger">Remove Item</a>
-			</div>
-		</div>
-	</div> <br>
-	<!-- End of Items -->
-
-	<center>
-		<a href="" class="btn btn-secondary">Proceed to checkout</a>
-	</center>
+				echo "
+				<center>
+					<a href=\"includes\\resetall.inc.php\" class=\"btn btn-danger\">
+						Empty cart
+					</a>
+					<a href=\"\" class=\"btn btn-secondary\">
+						Proceed to checkout
+					</a>
+				</center>
+				";
+			}
+		?>
+	</div>
 
 <?php
     require_once("footer.php");

@@ -1,7 +1,11 @@
 <?php
 
 session_start();
-session_unset();
-session_destroy();
+// session_unset();
+// session_destroy();
+unset($_SESSION['cart']);
+unset($_SESSION['cartlist']);
+unset($_SESSION['cartmultiples']);
 
-header("Location: ../index.php", TRUE, 301);
+header("Location: ../cart.php", TRUE, 301);
+die();
