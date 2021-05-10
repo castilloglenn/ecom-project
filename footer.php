@@ -50,6 +50,7 @@
 	</section>
 
 	<script src="script/bootstrap.bundle.min.js"></script>
+	<script src="script/fontawesome.js"></script>
 </body>
 
 </html>

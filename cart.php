@@ -3,7 +3,7 @@
 ?>
                     <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" href="login.php">Login/Register</a>
+							<a class="nav-link" href="login.php">Login/Register</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="index.php">Home</a>
@@ -24,7 +24,7 @@
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="cart.php">Cart
+							<a class="nav-link active" href="#">Cart
 								<span class="badge rounded-pill bg-primary">
 									<?php
 										echo $_SESSION['cart'];
@@ -41,12 +41,54 @@
 			</div>
 		</nav>
 	</section>
-    <!-- END OF NAVIGATION PANEL -->>
+    <!-- END OF NAVIGATION PANEL -->
 
+	<div class="container h-100">
+		<br>
+		<h3><i class="fas fa-shopping-basket"></i>  Shopping Cart</h3>
 
+		<!-- Items -->
+		<div class="row border rounded border-2 border-secondary h-100 justify-content-center align-items-center text-center">
+			<div class="col-md-3">
+				<img src="./img/products/Mug/g3.jpg" width=150>
+			</div>
 
+			<div class="col-md-3">
+				<b class="pName">White Mug</b>
+			</div>
 
+			<div class="col-md-3">
+				<b class="pPrice">P 100.00</b>
+			</div>
 
+			<div class="col-md-3">
+				<a href="" class="btn btn-danger">Remove Item</a>
+			</div>
+		</div>
+
+		<div class="row border rounded border-top-0 border-2 border-secondary h-100 justify-content-center align-items-center text-center">
+			<div class="col-md-3">
+				<img src="./img/products/Mug/g3.jpg" width=150>
+			</div>
+
+			<div class="col-md-3">
+				<b class="pName">White Mug</b>
+			</div>
+
+			<div class="col-md-3">
+				<b class="pPrice">P 100.00</b>
+			</div>
+
+			<div class="col-md-3">
+				<a href="" class="btn btn-danger">Remove Item</a>
+			</div>
+		</div>
+	</div> <br>
+	<!-- End of Items -->
+
+	<center>
+		<a href="" class="btn btn-secondary">Proceed to checkout</a>
+	</center>
 
 <?php
     require_once("footer.php");

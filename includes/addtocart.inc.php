@@ -19,5 +19,6 @@ if ($data !== false && $data->num_rows > 0) {
 
 // echo isset($_SESSION['cartlist'][1]);
 // unset($_SESSION['cartlist'][1]);
+echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
 
-header("Location: ../".$_REQUEST['link'], TRUE, 301);
+// header("Location: ../".$_REQUEST['link'], TRUE, 301);

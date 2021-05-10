@@ -24,7 +24,7 @@
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Cart
+							<a class="nav-link" href="cart.php">Cart
 								<span class="badge rounded-pill bg-primary">
 									<?php
 										echo $_SESSION['cart'];
