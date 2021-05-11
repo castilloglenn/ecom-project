@@ -46,7 +46,7 @@
 	<div class="container h-100">
 		<br>
 		<h3><i class="fas fa-shopping-basket"></i>  Shopping Cart</h3>
-		<?php
+		<?php 
 			if (!isset($_SESSION['cartlist']) || sizeof($_SESSION['cartlist']) === 0) {
 				echo "
 				<center style=\"margin-top: 125px; margin-bottom: 200px;\">
@@ -54,17 +54,17 @@
 				</center>";
 			} else {
 				echo " <br>
-					<div class=\"row h-100 justify-content-center align-items-center text-center\">
-						<div class=\"col-md-3 border\"><b>Preview</b></div>
-						<div class=\"col-md-3 border\"><b>Name</b></div>
-						<div class=\"col-md-2 border\"><b>Price</b></div>
-						<div class=\"col-md-2 border\"><b>Quantity</b></div>
-						<div class=\"col-md-2 border\"><b>Adjustment</b></div>
+					<div class=\"row border h-100 justify-content-center align-items-center text-center p-2\">
+						<div class=\"col-md-3\"><b>Preview</b></div>
+						<div class=\"col-md-3\"><b>Name</b></div>
+						<div class=\"col-md-2\"><b>Price</b></div>
+						<div class=\"col-md-2\"><b>Quantity</b></div>
+						<div class=\"col-md-2\"><b>Adjustment</b></div>
 					</div>";
-				$total_price = 0;
+				$_SESSION['total_price'] = 0;
 				foreach ($_SESSION['cartlist'] as $row) {
-					echo " <br>
-					<div class=\"row border h-100 justify-content-center align-items-center text-center\">
+					echo "
+					<div class=\"row border h-100 justify-content-center align-items-center text-center p-2\">
 						<div class=\"col-md-3\">
 							<img src=\"".$row["image"]."\" width=150>
 						</div>
@@ -86,22 +86,22 @@
 							<a href=\"includes/decrease.inc.php?name=".$row['name']."&link=cart.php\" class=\"btn btn-danger\">-</a>
 						</div>
 					</div>";
-					$total_price = $total_price + ($row["price"] * $row["quantity"]);
+					$_SESSION['total_price'] = $_SESSION['total_price'] + ($row["price"] * $row["quantity"]);
 				}
 				
 				echo " <br>
 					<div class=\"row h-100 justify-content-center align-items-center text-center\">
 						<div class=\"col-md-12\">
-							<h4>Total: &#x20b1 ".number_format($total_price, 2, '.', ',')."</h4>
+							<h4>Total: &#x20b1 ".number_format($_SESSION['total_price'], 2, '.', ',')."</h4>
 						</div>
 					</div>";
 
 				echo "
 				<center>
-					<a href=\"includes\\resetall.inc.php\" class=\"btn btn-danger\">
+					<a href=\"includes\\resetall.inc.php\" class=\"btn btn-danger me-1 px-5\">
 						Empty cart
 					</a>
-					<a href=\"\" class=\"btn btn-secondary\">
+					<a href=\"shipping.php\" class=\"btn btn-secondary px-4\">
 						Proceed to checkout
 					</a>
 				</center>

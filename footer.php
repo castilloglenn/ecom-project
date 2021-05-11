@@ -51,6 +51,7 @@
 
 	<script src="script/bootstrap.bundle.min.js"></script>
 	<script src="script/fontawesome.js"></script>
+	<script src="script/script.js"></script>
 </body>
 
 </html>

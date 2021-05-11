@@ -5,6 +5,9 @@ if ($conn -> query($createdb)) $conn -> query("USE ecommerce");
 
 $create_customer = "CREATE TABLE IF NOT EXISTS customer(
     customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) DEFAULT 'Guest',
+    password VARCHAR(255) DEFAULT 'Guest',
+    id VARCHAR(255) NOT NULL,
     name VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL,
     contact_no VARCHAR(255) NOT NULL)";
@@ -24,11 +27,13 @@ $create_transaction = "CREATE TABLE IF NOT EXISTS transaction(
 $create_cart = "CREATE TABLE IF NOT EXISTS cart(
     customer_id INT NOT NULL,
     product_id INT NOT NULL,
+    quantity INT NOT NULL,
     FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
     FOREIGN KEY (product_id) REFERENCES product(product_id))";
 $create_contain = "CREATE TABLE IF NOT EXISTS contain(
     transaction_id INT NOT NULL,
     product_id INT NOT NULL,
+    quantity INT NOT NULL,
     FOREIGN KEY (transaction_id) REFERENCES transaction(transaction_id),
     FOREIGN KEY (product_id) REFERENCES product(product_id))";
 
