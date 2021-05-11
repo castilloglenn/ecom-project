@@ -5,7 +5,7 @@ $newcart = $_SESSION['cart'] - 1;
 $newqty = $_SESSION['cartlist'][$_REQUEST["name"]]['quantity'] - 1;
 
 if ($newcart < 1 && $newqty < 1) {
-    header("Location: resetall.inc.php", TRUE, 301);
+    header("Location: resetall.inc.php?link=cart.php", TRUE, 301);
     die();
 } else if ($newqty < 1) {
     unset($_SESSION['cartlist'][$_REQUEST['name']]);

@@ -7,13 +7,16 @@ if (window.location.href.includes("shipping.php")) {
 
 function changePayment() {
     let options = document.getElementById("option");
+    let paymentPlaceholder = document.getElementsByName("payment")[0];
     if (options.options[options.selectedIndex].value == 1) {
         paymentDiv.style.display = "none";
+        paymentPlaceholder.removeAttribute('required');
     } else {
         let paymentTitle = document.getElementById("paymentLabel");
-        let paymentPlaceholder = document.getElementsByName("payment")[0];
         paymentTitle.innerHTML = options.options[options.selectedIndex].text + " Number";
         paymentPlaceholder.placeholder = "Enter your " + options.options[options.selectedIndex].text + " number";
         paymentDiv.style.display = "block";
+        paymentPlaceholder.setAttribute('required', 'required');
+        paymentPlaceholder.attributes['required'] = 'required';
     }
 }

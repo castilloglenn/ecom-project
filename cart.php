@@ -49,12 +49,12 @@
 		<?php 
 			if (!isset($_SESSION['cartlist']) || sizeof($_SESSION['cartlist']) === 0) {
 				echo "
-				<center style=\"margin-top: 125px; margin-bottom: 200px;\">
-					<h2>No item(s) to display..</h2><h2>Add some items on the store!</h2>
+				<center class=\"shadow border rounded p-5\" style=\"margin-top: 55px; margin-bottom: 200px;\">
+					<h2>No item(s) to display..</h2><h2>Add some items at the store!</h2>
 				</center>";
 			} else {
-				echo " <br>
-					<div class=\"row border h-100 justify-content-center align-items-center text-center p-2\">
+				echo " <br> <div class=\"border rounded shadow p-3\">
+					<div class=\"row h-100 justify-content-center align-items-center text-center p-2\">
 						<div class=\"col-md-3\"><b>Preview</b></div>
 						<div class=\"col-md-3\"><b>Name</b></div>
 						<div class=\"col-md-2\"><b>Price</b></div>
@@ -64,7 +64,7 @@
 				$_SESSION['total_price'] = 0;
 				foreach ($_SESSION['cartlist'] as $row) {
 					echo "
-					<div class=\"row border h-100 justify-content-center align-items-center text-center p-2\">
+					<div class=\"row h-100 justify-content-center align-items-center text-center p-2\">
 						<div class=\"col-md-3\">
 							<img src=\"".$row["image"]."\" width=150>
 						</div>
@@ -98,13 +98,13 @@
 
 				echo "
 				<center>
-					<a href=\"includes\\resetall.inc.php\" class=\"btn btn-danger me-1 px-5\">
+					<a href=\"includes\\resetall.inc.php?link=cart.php\" class=\"btn btn-danger me-1 px-5\">
 						Empty cart
 					</a>
 					<a href=\"shipping.php\" class=\"btn btn-secondary px-4\">
 						Proceed to checkout
 					</a>
-				</center>
+				</center> </div>
 				";
 			}
 		?>
