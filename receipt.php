@@ -94,15 +94,32 @@
                                 </tr>
                             </thead>
                             <tbody>";
-                    foreach ($_SESSION['cartlist'] as $product) {
-                        echo "
+                    if ($_SESSION['name'] == 'GUEST') {
+                        foreach ($_SESSION['cartlist'] as $product) {
+                            echo "
                                 <tr>
                                     <td>".$product['quantity']."</td>
                                     <td>".$product['name']."</td>
                                     <td>&#x20b1 ".number_format($product['price'], 2, '.', ',')."</td>
                                     <td>&#x20b1 ".number_format(($product['price'] * $product['quantity']), 2, '.', ',')."</td>
                                 </tr>";
-                    } echo "    <tr>
+                        }
+                    } else {
+                        $getcart = $conn->query("SELECT product_id, quantity FROM cart WHERE customer_id=".$_SESSION['name']);
+                        while ($row = $getcart->fetch_assoc()) {
+                            $getproduct = $conn->query("SELECT * FROM product WHERE product_id=".($row['product_id']));
+                            $product = $getproduct->fetch_assoc();
+                            echo "
+                                <tr>
+                                    <td>".$row['quantity']."</td>
+                                    <td>".$product['name']."</td>
+                                    <td>&#x20b1 ".number_format($product['price'], 2, '.', ',')."</td>
+                                    <td>&#x20b1 ".number_format(($product['price'] * $row['quantity']), 2, '.', ',')."</td>
+                                </tr>";
+                        }
+                        $deleteCartProduct = $conn->query("DELETE FROM cart WHERE customer_id=".$_SESSION['name']);
+                    }
+                    echo "    <tr>
                                     <td></td>
                                     <td></td>
                                     <td><b>Total</b></td>

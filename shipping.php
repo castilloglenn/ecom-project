@@ -60,28 +60,57 @@
             <h3><i class="fas fa-cart-arrow-down"></i>  Checkout</h3>
             <div class="container-fluid shadow border rounded py-4">
                 <?php 
-                    foreach ($_SESSION['cartlist'] as $cartlist) {
-                        echo "
-                            <div class=\"row justify-content-center align-items-center text-center\">
-                                <div class=\"col-md-2\">
-                                    <b>".$cartlist["quantity"]."</b>
+                    if ($_SESSION['name'] == 'GUEST') {
+                        foreach ($_SESSION['cartlist'] as $cartlist) {
+                            echo "
+                                <div class=\"row justify-content-center align-items-center text-center\">
+                                    <div class=\"col-md-2\">
+                                        <b>".$cartlist["quantity"]."</b>
+                                    </div>
+    
+                                    <div class=\"col-md-4\">
+                                        <b>".$cartlist["name"]."</b>
+                                    </div>
+    
+                                    <div class=\"col-md-3\">
+                                        <b>&#x20b1 ".number_format($cartlist["price"], 2, '.', ',')."</b>
+                                    </div>
+    
+                                    <div class=\"col-md-3\">
+                                        <b>&#x20b1 ".number_format(($cartlist["quantity"]*$cartlist["price"]), 2, '.', ',')."</b>
+                                    </div>
+    
                                 </div>
-
-                                <div class=\"col-md-4\">
-                                    <b>".$cartlist["name"]."</b>
+                            ";
+                        }
+                    } else {
+                        $getcart = $conn->query("SELECT product_id, quantity FROM cart WHERE customer_id=".$_SESSION['name']);
+                        while ($row = $getcart->fetch_assoc()) {
+                            $getproduct = $conn->query("SELECT * FROM product WHERE product_id=".($row['product_id']));
+                            $product = $getproduct->fetch_assoc();
+                            echo "
+                                <div class=\"row justify-content-center align-items-center text-center\">
+                                    <div class=\"col-md-2\">
+                                        <b>".$row["quantity"]."</b>
+                                    </div>
+    
+                                    <div class=\"col-md-4\">
+                                        <b>".$product["name"]."</b>
+                                    </div>
+    
+                                    <div class=\"col-md-3\">
+                                        <b>&#x20b1 ".number_format($product["price"], 2, '.', ',')."</b>
+                                    </div>
+    
+                                    <div class=\"col-md-3\">
+                                        <b>&#x20b1 ".number_format(($row["quantity"]*$product["price"]), 2, '.', ',')."</b>
+                                    </div>
+    
                                 </div>
-
-                                <div class=\"col-md-3\">
-                                    <b>&#x20b1 ".number_format($cartlist["price"], 2, '.', ',')."</b>
-                                </div>
-
-                                <div class=\"col-md-3\">
-                                    <b>&#x20b1 ".number_format(($cartlist["quantity"]*$cartlist["price"]), 2, '.', ',')."</b>
-                                </div>
-
-                            </div>
-                        ";
+                            ";
+                        }
                     }
+                    
                     echo "</div>";
                 ?>
             </div>

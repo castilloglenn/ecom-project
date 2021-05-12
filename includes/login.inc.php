@@ -16,6 +16,11 @@ $result = $check->fetch_assoc();
 if (password_verify($_POST['pass'], $result['password'])) {
     $_SESSION['name'] = $result['customer_id'];
     $_SESSION['detail'] = $result;
+    unset($_SESSION['cart']);
+    unset($_SESSION['cartmultiples']);
+    unset($_SESSION['cartlist']);
+    unset($_SESSION['total_price']);
+    
     header("Location: ../dashboard.php", TRUE, 301);
     die();
 } else {

@@ -59,6 +59,7 @@
 		<br>
 		<h3><i class="fas fa-shopping-basket"></i>  Shopping Cart</h3>
 		<?php 
+		if ($_SESSION['name'] == 'GUEST') {
 			if (!isset($_SESSION['cartlist']) || sizeof($_SESSION['cartlist']) === 0) {
 				echo "
 				<center class=\"shadow border rounded p-5\" style=\"margin-top: 55px; margin-bottom: 200px;\">
@@ -100,14 +101,59 @@
 					</div>";
 					$_SESSION['total_price'] = $_SESSION['total_price'] + ($row["price"] * $row["quantity"]);
 				}
+			}
+		} else {
+			$getcart = $conn->query("SELECT product_id, quantity FROM cart WHERE customer_id=".$_SESSION['name']);
+			if ($getcart->num_rows == 0) {
+				echo "
+				<center class=\"shadow border rounded p-5\" style=\"margin-top: 55px; margin-bottom: 200px;\">
+					<h2>No item(s) to display..</h2><h2>Add some items at the store!</h2>
+				</center>";
+			} else {
+				echo " <br> <div class=\"border rounded shadow p-3\">
+						<div class=\"row h-100 justify-content-center align-items-center text-center p-2\">
+							<div class=\"col-md-3\"><b>Preview</b></div>
+							<div class=\"col-md-3\"><b>Name</b></div>
+							<div class=\"col-md-2\"><b>Price</b></div>
+							<div class=\"col-md-2\"><b>Quantity</b></div>
+							<div class=\"col-md-2\"><b>Adjustment</b></div>
+						</div>";
 				
+				while ($row = $getcart->fetch_assoc()) {
+					$getproduct = $conn->query("SELECT * FROM product WHERE product_id=".($row['product_id']));
+					$product = $getproduct->fetch_assoc();
+					echo "
+					<div class=\"row h-100 justify-content-center align-items-center text-center p-2\">
+						<div class=\"col-md-3\">
+							<img src=\"".$product["image"]."\" width=150>
+						</div>
+
+						<div class=\"col-md-3\">
+							<b>".$product["name"]."</b>
+						</div>
+
+						<div class=\"col-md-2\">
+							<b>&#x20b1 ".number_format($product["price"], 2, '.', ',')."</b>
+						</div>
+
+						<div class=\"col-md-2\">
+							<b>".$row["quantity"]."</b>
+						</div>
+
+						<div class=\"col-md-2\">
+							<a href=\"includes/addtocart.inc.php?id=".$row['product_id']."&link=cart.php\" class=\"btn btn-success\">+</a>
+							<a href=\"includes/decrease.inc.php?id=".$row['product_id']."&name=".$product['name']."&link=cart.php\" class=\"btn btn-danger\">-</a>
+						</div>
+					</div>";
+					$_SESSION['total_price'] = $_SESSION['total_price'] + ($product["price"] * $row["quantity"]);
+				}
 				echo " <br>
 					<div class=\"row h-100 justify-content-center align-items-center text-center\">
 						<div class=\"col-md-12\">
 							<h4>Total: &#x20b1 ".number_format($_SESSION['total_price'], 2, '.', ',')."</h4>
 						</div>
 					</div>";
-
+	
 				echo "
 				<center>
 					<a href=\"includes\\resetall.inc.php?link=cart.php\" class=\"btn btn-danger me-1 px-5\">
@@ -116,10 +162,9 @@
 					<a href=\"shipping.php\" class=\"btn btn-secondary px-4\">
 						Proceed to checkout
 					</a>
-				</center> </div>
-				";
+				</center> </div>";
 			}
-		?>
+		}?>
 	</div>
 
 <?php
