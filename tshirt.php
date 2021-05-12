@@ -84,7 +84,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="includes/addtocart.inc.php?id=5&link=tshirt.php" class="badge bg-primary">Add to Cart</a>
+                        <a href="includes/addtocart.inc.php?id=2&link=tshirt.php" class="badge bg-primary">Add to Cart</a>
                 </div>
 
                 <div class="col-sm">
@@ -96,7 +96,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=3&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
 
                 </div>
                 
@@ -109,7 +109,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=4&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
 
                 </div>
                 
@@ -139,7 +139,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=42&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
                     </div>
 
                 </div>
@@ -155,7 +155,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=43&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
                     </div>
                     
                 </div>
@@ -171,7 +171,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=44&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
                     </div>
                     
                 </div>
@@ -187,7 +187,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=45&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
                     </div>
                     
                 </div>
@@ -203,7 +203,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=46&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
                     </div>
                     
                 </div>
@@ -227,7 +227,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=47&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
                     </div>
                 </div>
 
@@ -241,7 +241,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=48&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
                     </div>
                 </div>
 
@@ -255,7 +255,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=49&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
                     </div>
                 </div>
 
@@ -269,7 +269,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=50&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
                     </div>
                 </div>
 
@@ -283,7 +283,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=51&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
                     </div>
                 </div>
 
@@ -306,7 +306,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=52&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
 
                 </div>
             </div>
@@ -321,7 +321,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=53&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
 
                 </div>
             </div>
@@ -336,7 +336,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=54&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
 
                 </div>
             </div>
@@ -351,7 +351,7 @@
                                 <path
                                     d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                             </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        <p><a href="includes/addtocart.inc.php?id=55&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
 
                 </div>
             </div>
@@ -362,19 +362,15 @@
                 <h5 class="product-name">Coffee Lover Programmer - Yellow Green </h5>
                 <span class="product-price">₱ 200.00 </span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-caret-right" viewBox="0 0 16 16">
-                                <path
-                                    d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
-                            </svg>
-                        <a href="#" class="badge bg-primary">Add to Cart</a>
+                        class="bi bi-caret-right" viewBox="0 0 16 16">
+                        <path
+                            d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                    </svg>
+                <p><a href="includes/addtocart.inc.php?id=56&link=tshirt.php" class="badge bg-primary">Add to Cart</a></p>
 
                 </div>
             </div>
-
-
         </div>
-
-
     </div>
 
 
