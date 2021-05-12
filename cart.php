@@ -101,6 +101,22 @@
 					</div>";
 					$_SESSION['total_price'] = $_SESSION['total_price'] + ($row["price"] * $row["quantity"]);
 				}
+				echo " <br>
+					<div class=\"row h-100 justify-content-center align-items-center text-center\">
+						<div class=\"col-md-12\">
+							<h4>Total: &#x20b1 ".number_format($_SESSION['total_price'], 2, '.', ',')."</h4>
+						</div>
+					</div>";
+
+				echo "
+				<center>
+					<a href=\"includes\\resetall.inc.php?link=cart.php\" class=\"btn btn-danger me-1 px-5\">
+						Empty cart
+					</a>
+					<a href=\"shipping.php\" class=\"btn btn-secondary px-4\">
+						Proceed to checkout
+					</a>
+				</center> </div>";
 			}
 		} else {
 			$getcart = $conn->query("SELECT product_id, quantity FROM cart WHERE customer_id=".$_SESSION['name']);
@@ -118,7 +134,7 @@
 							<div class=\"col-md-2\"><b>Quantity</b></div>
 							<div class=\"col-md-2\"><b>Adjustment</b></div>
 						</div>";
-				
+				$_SESSION['total_price'] = 0;
 				while ($row = $getcart->fetch_assoc()) {
 					$getproduct = $conn->query("SELECT * FROM product WHERE product_id=".($row['product_id']));
 					$product = $getproduct->fetch_assoc();
@@ -153,7 +169,7 @@
 							<h4>Total: &#x20b1 ".number_format($_SESSION['total_price'], 2, '.', ',')."</h4>
 						</div>
 					</div>";
-	
+
 				echo "
 				<center>
 					<a href=\"includes\\resetall.inc.php?link=cart.php\" class=\"btn btn-danger me-1 px-5\">

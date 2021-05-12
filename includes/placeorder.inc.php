@@ -13,8 +13,10 @@ if ($_SESSION['name'] == "GUEST") {
     $error = '';
     // File upload path
     $targetDir = "../uploads/";
+    $uploadDir = "./uploads/";
     $fileName = basename($_FILES["id"]["name"]);
     $targetFilePath = $targetDir . $fileName;
+    $uploadFilePath = $uploadDir . $fileName;
     $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
     if(isset($_POST["submit"]) && !empty($_FILES["id"]["name"])){
@@ -25,7 +27,7 @@ if ($_SESSION['name'] == "GUEST") {
             if(move_uploaded_file($_FILES["id"]["tmp_name"], $targetFilePath)){
                 // Insert image file name into database
                 $customer = $conn->prepare("INSERT INTO customer (id, name, address, contact_no) VALUES (?, ?, ?, ?)");
-                $customer->bind_param("ssss", $targetFilePath, $_POST['name'], $_POST['address'], $_POST['contact']);
+                $customer->bind_param("ssss", $uploadFilePath, $_POST['name'], $_POST['address'], $_POST['contact']);
                 $customer->execute();
 
                 $fetchmaxid = $conn->query("SELECT MAX(customer_id) FROM customer");
@@ -92,11 +94,9 @@ if ($_SESSION['name'] == "GUEST") {
         $data2 = $fetchmaxid2->fetch_assoc();
         $_SESSION['transactionID'] = $data2['MAX(transaction_id)'];
 
-        foreach ($_SESSION['cartlist'] as $item) {
-            $transacts = $conn->query("INSERT INTO contain VALUES (".$_SESSION['transactionID'].", ".$item['id'].",".$item['quantity'].")");
-            if ($transacts) {
-                echo "<br>Successfully added".$item['name']."<br>";
-            }
+        $fetchcart = $conn->query("SELECT * FROM cart WHERE customer_id=".$_SESSION['name']);
+        while ($row = $fetchcart->fetch_assoc()) {
+            $transacts = $conn->query("INSERT INTO contain VALUES (".$_SESSION['transactionID'].", ".$row['product_id'].",".$row['quantity'].")");
         }
         header("Location: ../receipt.php", TRUE, 301); 
         die();

@@ -34,8 +34,10 @@ if ($errors != "") {
     $error = "";
     // File upload path
     $targetDir = "../uploads/";
+    $uploadDir = "./uploads/";
     $fileName = basename($_FILES["id"]["name"]);
     $targetFilePath = $targetDir . $fileName;
+    $uploadFilePath = $uploadDir . $fileName;
     $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
     if(isset($_POST["submit"]) && !empty($_FILES["id"]["name"])){
@@ -43,7 +45,7 @@ if ($errors != "") {
         if(in_array(strtolower($fileType), $allowTypes)){
             if(move_uploaded_file($_FILES["id"]["tmp_name"], $targetFilePath)){
                 $customer = $conn->prepare("INSERT INTO customer (username, password, id, name, address, contact_no) VALUES (?, ?, ?, ?, ?, ?)");
-                $customer->bind_param("ssssss", $_POST['username'], password_hash($_POST['pass'], PASSWORD_DEFAULT), $targetFilePath, $_POST['name'], $_POST['address'], $_POST['contact']);
+                $customer->bind_param("ssssss", $_POST['username'], password_hash($_POST['pass'], PASSWORD_DEFAULT), $uploadFilePath, $_POST['name'], $_POST['address'], $_POST['contact']);
                 $customer->execute();
                 if($result){
                     header("Location: ../login.php?rnotice=Successfully created new account.");

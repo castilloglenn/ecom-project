@@ -30,6 +30,10 @@ if ($_SESSION['name'] == 'GUEST') {
     $total = $conn->query("SELECT SUM(quantity) FROM cart WHERE customer_id=".$_SESSION['name']);
     $qty = $total->fetch_assoc();
     $_SESSION['cart'] = $qty['SUM(quantity)'];
+    if ($qty['SUM(quantity)'] < 1) {
+        header("Location: resetall.inc.php?link=cart.php", TRUE, 301);
+        die();
+    }
 }
 
 header("Location: ../".$_REQUEST['link'], TRUE, 301);

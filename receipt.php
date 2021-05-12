@@ -69,7 +69,7 @@
                     $transaction = $data2->fetch_assoc();
                 ?>
                 <h5><b><i class="fas fa-hashtag"></i> Transaction Number: <?php echo $_SESSION['transactionID']; ?></b></h5>
-                <P class="m-0">
+                <p class="m-0">
                     We will contact your transaction status and updates using your contact number
                     <b>(<?php echo $customer['contact_no']; ?>)</b>, you can do a follow-up of your transaction by sending email at 
                     <b>mail@pulsebytes.com</b>, if you are registered at our website, you can see the
@@ -132,7 +132,7 @@
                     unset($_SESSION['cartlist']);
                     unset($_SESSION['total_price']);?>
                     </div>
-                </P>
+                </p>
             </div>
         </div>
     </section>

@@ -23,6 +23,7 @@ $create_transaction = "CREATE TABLE IF NOT EXISTS transaction(
     payment_option VARCHAR(255) NOT NULL,
     total_payment DOUBLE(8, 2) NOT NULL,
     record_date DATETIME DEFAULT NOW() NOT NULL,
+    status VARCHAR(255) DEFAULT 'PLACED',
     FOREIGN KEY (customer_id) REFERENCES customer(customer_id))";
 $create_cart = "CREATE TABLE IF NOT EXISTS cart(
     customer_id INT NOT NULL,
