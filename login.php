@@ -1,5 +1,9 @@
 <?php
     require_once("header.php");
+	if ($_SESSION['name'] != "GUEST") {
+        header("Location: dashboard.php", TRUE, 301);
+        die();
+    }
 ?>
                     <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
 						<?php

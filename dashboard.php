@@ -60,6 +60,11 @@
     <!-- END OF NAVIGATION PANEL -->
 
 
+<?php
+    $check = $conn->query("SELECT * FROM customer WHERE customer_id=".$_SESSION['name']);
+    $result = $check->fetch_assoc();
+    $_SESSION['detail'] = $result;
+?>
 <section>
     <div class="container"> <br>
         <div class="row d-flex justify-content-between">
@@ -114,7 +119,7 @@
         </div>
         <div class="container border rounded shadow mt-4 p-5">
             <h3><i class="fas fa-user-alt"></i>  Account Information</h3>
-            <form enctype="multipart/form-data" method="POST" action="includes/register.inc.php">
+            <form enctype="multipart/form-data" method="POST" action="includes/save.inc.php">
                 <center class="mt-4" style="color:red;"><b>
                     <?php
                         if (isset($_REQUEST['rerror'])) {
@@ -131,32 +136,44 @@
                 </b></center>
                 <div class="mb-3 mt-4">
                     <b><label for="username" class="form-label">Username</label></b>
-                    <input type="text" class="form-control m-0" name="username" placeholder="No spaces and special characters, <= 5 chars" required>
+                    <input type="text" class="form-control m-0" name="username" placeholder="No spaces and special characters, <= 5 chars" 
+                            <?php
+                                echo " value=".str_replace(" ","&nbsp;",$_SESSION['detail']['username']).">";
+                            ?> 
                 </div>
                 <div class="mb-3 mt-4">
-                    <b><label for="pass" class="form-label">Password</label></b>
-                    <input type="password" class="form-control m-0" name="pass" placeholder="Must be strong, secured password" required>
+                    <b><label for="pass" class="form-label">Change Password</label></b>
+                    <input type="password" class="form-control m-0" name="pass" placeholder="Must be strong, secured password">
                 </div>
                 <div class="mb-3 mt-4">
                     <b><label for="vpass" class="form-label">Verify Password</label></b>
-                    <input type="password" class="form-control m-0" name="vpass" placeholder="Must match the password" required>
+                    <input type="password" class="form-control m-0" name="vpass" placeholder="Must match the password">
                 </div>
                 <div class="mb-3 mt-4">
                     <b><label for="name" class="form-label">Name</label></b>
-                    <input type="text" class="form-control m-0" name="name" placeholder="Enter your full name" required>
+                    <input type="text" class="form-control m-0" name="name" placeholder="Enter your full name" 
+                            <?php
+                                echo " value=".str_replace(" ","&nbsp;",$_SESSION['detail']['name']).">";
+                            ?> 
                 </div>
                 <div class="mb-3">
                     <b><label for="address" class="form-label">Address</label></b>
-                    <input type="text" class="form-control m-0" name="address" placeholder="Enter your full address" required>
+                    <input type="text" class="form-control m-0" name="address" placeholder="Enter your full address" 
+                            <?php
+                                echo " value=".str_replace(" ","&nbsp;",$_SESSION['detail']['address']).">";
+                            ?> 
                 </div>
                 <div class="mb-3">
                     <b><label for="contact" class="form-label">Contact Number</label></b>
-                    <input type="text" class="form-control m-0" name="contact" placeholder="Enter your contact number" required>
+                    <input type="text" class="form-control m-0" name="contact" placeholder="Enter your contact number" 
+                            <?php
+                                echo " value=".str_replace(" ","&nbsp;",$_SESSION['detail']['contact_no']).">";
+                            ?> 
                 </div>
                 <div class="mb-3">
                     <b><label for="id" class="form-label">Valid ID</label></b> <br>
-                    <img src="./uploads/2x2 uniform.jpg" width="200px">
-                    <input type="file" class="form-control m-0" name="id" required>
+                    <img src="<?php echo $_SESSION['detail']['id'] ?>" width="75%" height="25%">
+                    <input type="file" class="form-control m-0 mt-4" name="id">
                 </div>
                 
                 <center>
