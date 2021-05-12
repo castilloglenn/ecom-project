@@ -3,13 +3,13 @@
 session_start();
 require_once("dbstart.inc.php");
 
-echo "POST: <br>";
-print_r($_POST);
-echo "<br> FILES: <br>";
-print_r($_FILES);
-echo "<br> SESSION: <br>";
-print_r($_SESSION);
-echo "<br>";
+// echo "POST: <br>";
+// print_r($_POST);
+// echo "<br> FILES: <br>";
+// print_r($_FILES);
+// echo "<br> SESSION: <br>";
+// print_r($_SESSION);
+// echo "<br>";
 
 $errors = "";
 if(!preg_match('/^[a-zA-Z0-9]{5,}$/', $_POST['username'])) { 
@@ -29,6 +29,7 @@ if (!preg_match('/^[a-zA-Z0-9]{5,}$/', $_POST['pass'])) {
 
 if ($errors != "") {
     header("Location: ../login.php?rerror=".$errors);
+    die();
 } else {
     $error = "";
     // File upload path
@@ -46,6 +47,7 @@ if ($errors != "") {
                 $customer->execute();
                 if($result){
                     header("Location: ../login.php?rnotice=Successfully created new account.");
+                    die();
                 }else{
                     $error .= "Upload error<br>";
                 } 
@@ -59,6 +61,7 @@ if ($errors != "") {
         $error .= 'No image<br>';
     }
     header("Location: ../login.php?rerror=".$error);
+    die();
 }
 
 ?>

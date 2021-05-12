@@ -47,14 +47,28 @@
 		<div class="row justify-content-evenly">
 			<div class="col-md-5 shadow border p-5">
 				<h3><i class="fas fa-sign-in-alt"></i> Log In</h3>
-				<form enctype="multipart/form-data" method="POST" action="#">
+				<form method="POST" action="includes/login.inc.php">
+					<center class="mt-4" style="color:red;"><b>
+						<?php
+							if (isset($_REQUEST['lerror'])) {
+								echo $_REQUEST['lerror'];
+							}
+						?>
+					</b></center>
+					<center class="mt-4" style="color:blue;"><b>
+						<?php
+							if (isset($_REQUEST['lnotice'])) {
+								echo $_REQUEST['lnotice'];
+							}
+						?>
+					</b></center>
 					<div class="mb-3 mt-4">
 						<b><label for="name" class="form-label">Username</label></b>
 						<input type="text" class="form-control m-0" name="name" placeholder="Enter your username" required>
 					</div>
 					<div class="mb-3 mt-4">
-						<b><label for="name" class="form-label">Password</label></b>
-						<input type="password" class="form-control m-0" name="name" placeholder="Enter your password" required>
+						<b><label for="pass" class="form-label">Password</label></b>
+						<input type="password" class="form-control m-0" name="pass" placeholder="Enter your password" required>
 					</div>
 					<center>
 						<input type="submit" class="btn btn-primary mt-3 px-5" name="submit" value="Login">

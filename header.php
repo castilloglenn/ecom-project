@@ -18,6 +18,7 @@
 
 	<link rel="stylesheet" type="text/css" href="./style/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./style/style.css">
+    <link rel="icon" href="./img/icon.ico">
 
 	<title>PulseBytes | Merch Shop</title>
 </head>
