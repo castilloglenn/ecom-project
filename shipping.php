@@ -2,9 +2,21 @@
     require_once("header.php");
 ?>
                     <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" href="login.php">Login/Register</a>
-						</li>
+                        <?php
+							if ($_SESSION['name'] == 'GUEST') {
+								echo "
+									<li class=\"nav-item\">
+										<a class=\"nav-link\" href=\"login.php\">Login/Register</a>
+									</li>
+								";
+							} else {
+								echo "
+									<li class=\"nav-item\">
+										<a class=\"nav-link\" href=\"dashboard.php\">Dashboard</a>
+									</li>
+								";
+							}
+						?>
 						<li class="nav-item">
 							<a class="nav-link" href="index.php">Home</a>
 						</li>
@@ -81,19 +93,49 @@
                     <h3><i class="fas fa-envelope-open-text"></i> Fill-Out Shipping Information</h3>
                     <div class="mb-3 mt-4">
                         <b><label for="name" class="form-label">Name</label></b>
-                        <input type="text" class="form-control m-0" name="name" placeholder="Enter your full name" required>
+                        <?php if ($_SESSION['name'] != 'GUEST') echo "<fieldset disabled>"; ?>
+                        <input type="text" class="form-control m-0" name="name" placeholder="Enter your full name" 
+                            <?php
+                                if ($_SESSION['name'] != 'GUEST') {
+                                    echo " id=\"disabledTextInput\" value=".
+                                        str_replace(" ","&nbsp;",$_SESSION['detail']['name'])." 
+                                        required>";}
+                                else echo "required>";
+                            ?> 
                     </div>
                     <div class="mb-3">
                         <b><label for="address" class="form-label">Address</label></b>
-                        <input type="text" class="form-control m-0" name="address" placeholder="Enter your full address" required>
+                        <?php if ($_SESSION['name'] != 'GUEST') echo "<fieldset disabled>"; ?>
+                        <input type="text" class="form-control m-0" name="address" placeholder="Enter your full address" 
+                            <?php
+                                if ($_SESSION['name'] != 'GUEST') {
+                                    echo " id=\"disabledTextInput\" value=".
+                                        str_replace(" ","&nbsp;",$_SESSION['detail']['address'])." 
+                                        required>";}
+                                else echo "required> </fieldset>";
+                            ?>
                     </div>
                     <div class="mb-3">
                         <b><label for="contact" class="form-label">Contact Number</label></b>
-                        <input type="text" class="form-control m-0" name="contact" placeholder="Enter your contact number" required>
+                        <?php if ($_SESSION['name'] != 'GUEST') echo "<fieldset disabled>"; ?>
+                        <input type="text" class="form-control m-0" name="contact" placeholder="Enter your contact number" 
+                            <?php
+                                if ($_SESSION['name'] != 'GUEST') {
+                                    echo " id=\"disabledTextInput\" value=".
+                                        str_replace(" ","&nbsp;",$_SESSION['detail']['contact_no'])." 
+                                        required>";}
+                                else echo "required> </fieldset>";
+                            ?>
                     </div>
                     <div class="mb-3">
                         <b><label for="id" class="form-label">Valid ID</label></b>
-                        <input type="file" class="form-control m-0" name="id" required>
+                        <?php if ($_SESSION['name'] != 'GUEST') echo "<fieldset disabled>"; ?>
+                        <input type="file" class="form-control m-0" name="id" 
+                            <?php
+                                if ($_SESSION['name'] != 'GUEST') {
+                                    echo " id=\"disabledTextInput\" value=".$_SESSION['detail']['id']." required>";}
+                                else echo "required> </fieldset>";
+                            ?>
                     </div>
                     
                     <b><label for="option" class="form-label">Payment Option</label></b>

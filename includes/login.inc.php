@@ -15,7 +15,11 @@ $check = $conn->query("SELECT * FROM customer WHERE username='".$_POST['name']."
 $result = $check->fetch_assoc();
 if (password_verify($_POST['pass'], $result['password'])) {
     $_SESSION['name'] = $result['customer_id'];
+    $_SESSION['detail'] = $result;
     header("Location: ../dashboard.php", TRUE, 301);
+    die();
+} else {
+    header("Location: ../login.php?lerror=Incorrect username or password", TRUE, 301);
     die();
 }
 

@@ -2,9 +2,21 @@
     require_once("header.php");
 ?>
                     <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" href="login.php">Login/Register</a>
-						</li>
+                        <?php
+							if ($_SESSION['name'] == 'GUEST') {
+								echo "
+									<li class=\"nav-item\">
+										<a class=\"nav-link\" href=\"login.php\">Login/Register</a>
+									</li>
+								";
+							} else {
+								echo "
+									<li class=\"nav-item\">
+										<a class=\"nav-link\" href=\"dashboard.php\">Dashboard</a>
+									</li>
+								";
+							}
+						?>
 						<li class="nav-item">
 							<a class="nav-link" href="index.php">Home</a>
 						</li>
@@ -44,10 +56,14 @@
             <h3><i class="fas fa-receipt"></i>  Transaction Placed Successfully</h3>
             <div class="container-float shadow border rounded p-5">
                 <?php
-                    $getdata = "SELECT * FROM customer WHERE customer_id=".$_SESSION['customerID'];
-                    $data = $conn -> query($getdata);
-                    $customer = $data->fetch_assoc();
-                    
+                    if ($_SESSION['name'] == 'GUEST') {
+                        $getdata = "SELECT * FROM customer WHERE customer_id=".$_SESSION['customerID'];
+                        $data = $conn -> query($getdata);
+                        $customer = $data->fetch_assoc();
+                    } else {
+                        $customer = $_SESSION['detail'];
+                    }
+
                     $getdata2 = "SELECT * FROM transaction WHERE transaction_id=".$_SESSION['transactionID'];
                     $data2 = $conn -> query($getdata2);
                     $transaction = $data2->fetch_assoc();
@@ -86,8 +102,7 @@
                                     <td>&#x20b1 ".number_format($product['price'], 2, '.', ',')."</td>
                                     <td>&#x20b1 ".number_format(($product['price'] * $product['quantity']), 2, '.', ',')."</td>
                                 </tr>";
-                    } echo "
-                                <tr>
+                    } echo "    <tr>
                                     <td></td>
                                     <td></td>
                                     <td><b>Total</b></td>
@@ -95,8 +110,10 @@
                                 </tr>
                             </tbody>
                         </table>";
-                    session_unset();
-                    session_destroy();?>
+                    unset($_SESSION['cart']);
+                    unset($_SESSION['cartmultiples']);
+                    unset($_SESSION['cartlist']);
+                    unset($_SESSION['total_price']);?>
                     </div>
                 </P>
             </div>

@@ -2,9 +2,21 @@
     require_once("header.php");
 ?>
                     <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link active" href="login.php">Login/Register</a>
-						</li>
+						<?php
+							if ($_SESSION['name'] == 'GUEST') {
+								echo "
+									<li class=\"nav-item\">
+										<a class=\"nav-link\" href=\"login.php\">Login/Register</a>
+									</li>
+								";
+							} else {
+								echo "
+									<li class=\"nav-item\">
+										<a class=\"nav-link\" href=\"dashboard.php\">Dashboard</a>
+									</li>
+								";
+							}
+						?>
 						<li class="nav-item">
 							<a class="nav-link" href="index.php">Home</a>
 						</li>
@@ -52,13 +64,6 @@
 						<?php
 							if (isset($_REQUEST['lerror'])) {
 								echo $_REQUEST['lerror'];
-							}
-						?>
-					</b></center>
-					<center class="mt-4" style="color:blue;"><b>
-						<?php
-							if (isset($_REQUEST['lnotice'])) {
-								echo $_REQUEST['lnotice'];
 							}
 						?>
 					</b></center>
