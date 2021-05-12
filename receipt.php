@@ -87,14 +87,14 @@
                                     <td>&#x20b1 ".number_format(($product['price'] * $product['quantity']), 2, '.', ',')."</td>
                                 </tr>";
                     } echo "
-                                <tr class=\"table-default\">
+                                <tr>
                                     <td></td>
                                     <td></td>
                                     <td><b>Total</b></td>
                                     <td><b>&#x20b1 ".number_format($_SESSION['total_price'], 2, '.', ',')."</b></td>
                                 </tr>
                             </tbody>
-                        </table>"; 
+                        </table>";
                     session_unset();
                     session_destroy();?>
                     </div>

@@ -47,10 +47,51 @@
 		<div class="row justify-content-evenly">
 			<div class="col-md-5 shadow border p-5">
 				<h3><i class="fas fa-sign-in-alt"></i> Log In</h3>
+				<form enctype="multipart/form-data" method="POST" action="#">
+					<div class="mb-3 mt-4">
+						<b><label for="name" class="form-label">Username</label></b>
+						<input type="text" class="form-control m-0" name="name" placeholder="Enter your username" required>
+					</div>
+					<div class="mb-3 mt-4">
+						<b><label for="name" class="form-label">Password</label></b>
+						<input type="password" class="form-control m-0" name="name" placeholder="Enter your password" required>
+					</div>
+					<center>
+						<input type="submit" class="btn btn-primary mt-3 px-5" name="submit" value="Login">
+					</center>
+				</form>
 			</div>
+		</div>
+		<div class="row justify-content-evenly mt-5">
 			<div class="col-md-5 shadow border p-5">
 				<h3><i class="fas fa-user-plus"></i> Register</h3>
-				<form enctype="multipart/form-data" method="POST" action="includes/placeorder.inc.php">
+				<form enctype="multipart/form-data" method="POST" action="includes/register.inc.php">
+					<center class="mt-4" style="color:red;"><b>
+						<?php
+							if (isset($_REQUEST['rerror'])) {
+								echo $_REQUEST['rerror'];
+							}
+						?>
+					</b></center>
+					<center class="mt-4" style="color:blue;"><b>
+						<?php
+							if (isset($_REQUEST['rnotice'])) {
+								echo $_REQUEST['rnotice'];
+							}
+						?>
+					</b></center>
+					<div class="mb-3 mt-4">
+						<b><label for="username" class="form-label">Username</label></b>
+						<input type="text" class="form-control m-0" name="username" placeholder="No spaces and special characters, <= 5 chars" required>
+					</div>
+					<div class="mb-3 mt-4">
+						<b><label for="pass" class="form-label">Password</label></b>
+						<input type="password" class="form-control m-0" name="pass" placeholder="Must be strong, secured password" required>
+					</div>
+					<div class="mb-3 mt-4">
+						<b><label for="vpass" class="form-label">Verify Password</label></b>
+						<input type="password" class="form-control m-0" name="vpass" placeholder="Must match the password" required>
+					</div>
 					<div class="mb-3 mt-4">
 						<b><label for="name" class="form-label">Name</label></b>
 						<input type="text" class="form-control m-0" name="name" placeholder="Enter your full name" required>
@@ -68,28 +109,6 @@
 						<input type="file" class="form-control m-0" name="id" required>
 					</div>
 					
-					<b><label for="option" class="form-label">Payment Option</label></b>
-					<div class="input-group mb-3">
-						<select class="form-select" id="option" name="option"  onload="changePayment()" onclick="changePayment()" required>
-							<option value="1">Cash On Delivery</option>
-							<option value="2">GCash</option>
-							<option value="3">Debit Card</option>
-							<option value="4">Credit Card</option>
-						</select>
-					</div>
-
-					<div class="mb-3" id="payment">
-						<b><label for="address" class="form-label" id="paymentLabel">Enter your </label></b>
-						<input type="text" class="form-control m-0" name="payment" placeholder="Enter your ">
-					</div>
-
-					<center style="color:red;"><b>
-						<?php
-							if (isset($_REQUEST['error'])) {
-								echo $_REQUEST['error'];
-							}
-						?>
-					</b></center>
 					<div style="border-top: 1px solid black; margin-top: 40px; padding-top: 20px;">
 						<center>
 							<p style="margin-bottom: 0;">

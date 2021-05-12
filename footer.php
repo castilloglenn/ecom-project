@@ -30,13 +30,13 @@
 							<li><a href="mouse.php">Gaming Mouse</a></li>
 						</ul>
 					</div>
-
+					
 					<div class="col-lg-3">
 						<h2 class="partnership-heading">In Partnership With</h2>
 						<ul class="logos">
-							<li><img src="./img/logo/razerr.png" alt="Razer"></li> <br>
-							<li><img src="./img/logo/steel-series.png" alt="Steel Series"></li> <br>
-							<li><img src="./img/logo/acer.png" alt="Acer"></li> <br>
+							<li><a href="https://www.razer.com/" target="_blank"><img src="./img/logo/razerr.png" alt="Razer"></li></a><br>
+							<li><a href="https://steelseries.com/" target="_blank"><img src="./img/logo/steel-series.png" alt="Steel Series"></li></a><br>
+							<li><a href="https://www.acer.com/ac/en/PH/content/predator-home" target="_blank"><img src="./img/logo/acer.png" alt="Acer"></li></a><br>
 						</ul>
 					</div>
 				</div>

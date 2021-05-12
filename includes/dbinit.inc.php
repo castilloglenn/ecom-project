@@ -48,7 +48,6 @@ $conn -> query($create_contain);
  * as the initial products/stocks of the company website merchandises
  */
 
-$insert = "INSERT INTO product (name, image, description, price) VALUES (?, ?, ?, ?)";
 $data = array(
     array("Lipunan Tee (Black)", "./img/products/b-ernest-t.png", "Tayo ay nakatira sa isang LIPUNAN. Ernest's favorite line ever. Comes in a black shirt.", 300.00),
     array("I Love Programming Tee", "./img/products/glenn-t.png", "Our very own programmer Glenn tshirt along with his favorite quotation.", 300.00),
@@ -108,6 +107,7 @@ $data = array(
     array("Coffee Lover Programmer - Yellow Green", "./img/products/Tshirt/3yg.jpg", "", 200.00)
 );
 
+$insert = "INSERT INTO product (name, image, description, price) VALUES (?, ?, ?, ?)";
 foreach ($data as $d) {
     $name = $d[0];
     $image = $d[1];

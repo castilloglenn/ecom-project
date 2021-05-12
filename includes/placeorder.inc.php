@@ -3,11 +3,11 @@
 session_start();
 require_once("dbstart.inc.php");
 
-print_r($_SESSION);
-echo "<br>";
-print_r($_POST);
-echo "<br>";
-print_r($_FILES);
+// print_r($_SESSION);
+// echo "<br>";
+// print_r($_POST);
+// echo "<br>";
+// print_r($_FILES);
 
 $error = '';
 // File upload path

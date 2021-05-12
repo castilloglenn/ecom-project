@@ -61,8 +61,6 @@
 			<div class="card-group text-center">
 				<div class="card">
 					<img src="img/products/glenn-t.png" class="mx-auto" alt="Glenn T-Shirt" width=75%>
-					<div class="card-body">
-					</div>
 					<div class="card-footer">
 						<h5 class="card-title">I Love Programming Tee</h5>
 						<h5 class="card-title">₱300.00</h5>
@@ -74,8 +72,6 @@
 				</div>
 				<div class="card">
 					<img src="img/products/seb-t.png" class="mx-auto" alt="Sebastian T-Shirt" width=75%>
-					<div class="card-body">
-					</div>
 					<div class="card-footer">
 						<h5 class="card-title">RAM Provider Iron Golem Tee</h5>
 						<h5 class="card-title">₱300.00</h5>
@@ -87,8 +83,6 @@
 				</div>
 				<div class="card">
 					<img src="img/products/p-ernest-t.png" class="mx-auto" alt="Ernest T-Shirt" width=75%>
-					<div class="card-body">
-					</div>
 					<div class="card-footer">
 						<h5 class="card-title">Lipunan Tee (Purple)</h5>
 						<h5 class="card-title">₱300.00</h5>
@@ -107,8 +101,6 @@
 			<div class="card-group text-center">
 				<div class="card">
 					<img src="img/products/b-ernest-t.png" class="mx-auto" alt="Ernest T-Shirt" width=75%>
-					<div class="card-body">
-					</div>
 					<div class="card-footer">
 						<h5 class="card-title">Lipunan Tee (Black)</h5>
 						<h5 class="card-title">₱300.00</h5>
@@ -119,10 +111,8 @@
 					</div>
 				</div>
 				<div class="card">
-					<img src="img/products/w-mug.png" class="mx-auto" alt="White Pulse Bytes Mug" width=75%>
-					<div class="card-body">
-					</div>
-					<div class="card-footer">
+					<img src="img/products/w-mug.png" class="m-auto" alt="White Pulse Bytes Mug" width=75%>
+					<div class="card-footer mt-5">
 						<h5 class="card-title">Pulse Bytes Mug (White)</h5>
 						<h5 class="card-title">₱150.00</h5>
 						<small>
@@ -132,10 +122,8 @@
 					</div>
 				</div>
 				<div class="card">
-					<img src="img/products/b-mug.png" class="mx-auto" alt="Black Pulse Bytes Mug" width=75%>
-					<div class="card-body">
-					</div>
-					<div class="card-footer">
+					<img src="img/products/b-mug.png" class="m-auto" alt="Black Pulse Bytes Mug" width=75%>
+					<div class="card-footer mt-5">
 						<h5 class="card-title">Pulse Bytes Mug (Black)</h5>
 						<h5 class="card-title">₱150.00</h5>
 						<small>
