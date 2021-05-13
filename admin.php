@@ -107,10 +107,84 @@
             
             <div class="container border rounded shadow mt-4 p-5">
                 <h3><i class="fas fa-user-friends"></i> Manage Customers</h3>
+                <div class="container overflow-auto"  style="height: 50vh;">
+                <?php
+                    $fetchall2 = $conn->query("SELECT *, (SELECT SUM(total_payment) FROM transaction WHERE customer_id=c.customer_id) AS total FROM customer c WHERE customer_id > 100 ORDER BY total DESC");
+                    if ($fetchall2->num_rows > 0) {
+                        echo "
+                        <table class=\"table table-striped justify-content-center align-items-center text-center\">
+                            <thead>
+                                <tr>
+                                    <th scope=\"col\">ID</th>
+                                    <th scope=\"col\">Account Type</th>
+                                    <th scope=\"col\">Name</th>
+                                    <th scope=\"col\">Address</th>
+                                    <th scope=\"col\">No. of transactions</th>
+                                    <th scope=\"col\">Total Payment</th>
+                                </tr>
+                            </thead>
+                            <tbody>";
+                        while ($row = $fetchall2->fetch_assoc()) {
+                            $getcount = $conn->query("SELECT COUNT(*), SUM(total_payment) FROM transaction WHERE customer_id=".$row['customer_id']);
+                            $countassoc = $getcount->fetch_assoc();
+                            $count = $countassoc['COUNT(*)'];
+                            $total = $countassoc['SUM(total_payment)'];
+
+                            echo "
+                            <tr>
+                                <td>".$row['customer_id']."</td>
+                                <td>".(($row['username'] == null) ? 'Guest' : 'Registered') ."</td>
+                                <td>".$row['name']."</td>
+                                <td>".$row['address']."</td>
+                                <td>".$count."</td>
+                                <td>&#x20b1 ".number_format($total, 2, '.', ',')."</td>
+                            </tr>
+                            ";
+                        }
+                        echo "
+                            </tbody>
+                        </table>
+                        ";
+                    } else {
+                        echo "
+                            <center>
+                                <h3 class=\"p-5\">No transactions recorded yet</h3>
+                            </center>
+                        ";
+                    }
+                ?>
+                </div>
             </div>
             
             <div class="container border rounded shadow my-4 p-5">
                 <h3><i class="fas fa-cogs"></i> Setup Administrator</h3>
+                <form method="POST" action="includes/changeadmin.inc.php">
+                    <center class="mt-4" style="color:red;"><b>
+						<?php
+							if (isset($_REQUEST['rerror'])) {
+								echo $_REQUEST['rerror'];
+							}
+						?>
+					</b></center>
+					<center class="mt-4" style="color:blue;"><b>
+						<?php
+							if (isset($_REQUEST['rnotice'])) {
+								echo $_REQUEST['rnotice'];
+							}
+						?>
+					</b></center>
+                    <div class="mb-3 mt-4">
+						<b><label for="pass" class="form-label">Change Password</label></b>
+						<input type="password" class="form-control m-0" name="pass" placeholder="Must be strong, secured password" required>
+					</div>
+					<div class="mb-3 mt-4">
+						<b><label for="vpass" class="form-label">Verify Password</label></b>
+						<input type="password" class="form-control m-0" name="vpass" placeholder="Must match the password" required>
+					</div>
+                    <center>
+						<input type="submit" class="btn btn-success mt-4 px-5" name="submit" value="Save Changes">
+					</center>
+                </form>
             </div>
         </div>
     </section>
