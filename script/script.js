@@ -22,5 +22,7 @@ function changePayment() {
 }
 
 function changeStatus(selectObject) {
-    console.log(selectObject.value);
+    let value = selectObject.value;
+    window.location.href = "./includes/changestatus.inc.php?" + value;
+    console.log(value);
 }

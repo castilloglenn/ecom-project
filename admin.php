@@ -70,6 +70,9 @@
                             </thead>
                             <tbody>";
                         while ($row = $fetchall->fetch_assoc()) {
+                            $getstatus = $conn->query("SELECT status FROM transaction WHERE transaction_id=".$row['transaction_id']);
+                            $statusassoc = $getstatus->fetch_assoc();
+                            $status = $statusassoc['status'];
                             echo "
                             <tr>
                                 <td>".$row['transaction_id']."</td>
@@ -77,11 +80,11 @@
                                 <td><a href=\"adminview.php?id=".$row['transaction_id']."\" class=\"link-primary\">View Receipt</a></td>
                                 <td>
                                     <select id=\"status\" onchange=\"changeStatus(this)\" aria-label=\"Status\">
-                                        <option value=\"PLACED\">PLACED</option>
-                                        <option value=\"PREPARING\">PREPARING</option>
-                                        <option value=\"SHIPPING\">SHIPPING</option>
-                                        <option value=\"DELIVERED\">DELIVERED</option>
-                                        <option value=\"CANCELED\">CANCELED</option>
+                                        <option ".(($status == "PLACED") ? 'selected' : '')." value=\"id=".$row['transaction_id']."&value=PLACED\">PLACED</option>
+                                        <option ".(($status == "PREPARING") ? 'selected' : '')." value=\"id=".$row['transaction_id']."&value=PREPARING\">PREPARING</option>
+                                        <option ".(($status == "SHIPPING") ? 'selected' : '')." value=\"id=".$row['transaction_id']."&value=SHIPPING\">SHIPPING</option>
+                                        <option ".(($status == "DELIVERED") ? 'selected' : '')." value=\"id=".$row['transaction_id']."&value=DELIVERED\">DELIVERED</option>
+                                        <option ".(($status == "CANCELED") ? 'selected' : '')." value=\"id=".$row['transaction_id']."&value=CANCELED\">CANCELED</option>
                                     </select>
                                 </td>
                             </tr>
@@ -111,16 +114,6 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-
-
-
 
 	<script type="text/javascript" src="./script/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="./script/fontawesome.js"></script>
