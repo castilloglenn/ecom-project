@@ -20,3 +20,7 @@ function changePayment() {
         paymentPlaceholder.attributes['required'] = 'required';
     }
 }
+
+function changeStatus(selectObject) {
+    console.log(selectObject.value);
+}

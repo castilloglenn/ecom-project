@@ -53,7 +53,61 @@
             </div>
             
             <div class="container border rounded shadow mt-4 p-5">
-                
+                <h3><i class="fas fa-file-contract"></i> Customer Transactions</h3>
+                <div class="container overflow-auto"  style="height: 50vh;">
+                <?php
+                    $fetchall = $conn->query("SELECT * FROM transaction");
+                    if ($fetchall->num_rows > 0) {
+                        echo "
+                        <table class=\"table table-striped justify-content-center align-items-center text-center\">
+                            <thead>
+                                <tr>
+                                    <th scope=\"col\">Tracking</th>
+                                    <th scope=\"col\">Date Ordered</th>
+                                    <th scope=\"col\">Receipt</th>
+                                    <th scope=\"col\">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>";
+                        while ($row = $fetchall->fetch_assoc()) {
+                            echo "
+                            <tr>
+                                <td>".$row['transaction_id']."</td>
+                                <td>".$row['record_date']."</td>
+                                <td><a href=\"adminview.php?id=".$row['transaction_id']."\" class=\"link-primary\">View Receipt</a></td>
+                                <td>
+                                    <select id=\"status\" onchange=\"changeStatus(this)\" aria-label=\"Status\">
+                                        <option value=\"PLACED\">PLACED</option>
+                                        <option value=\"PREPARING\">PREPARING</option>
+                                        <option value=\"SHIPPING\">SHIPPING</option>
+                                        <option value=\"DELIVERED\">DELIVERED</option>
+                                        <option value=\"CANCELED\">CANCELED</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            ";
+                        }
+                        echo "
+                            </tbody>
+                        </table>
+                        ";
+                    } else {
+                        echo "
+                            <center>
+                                <h3 class=\"p-5\">No transactions recorded yet</h3>
+                            </center>
+                        ";
+                    }
+                ?>
+                </div>
+            </div>
+            
+            <div class="container border rounded shadow mt-4 p-5">
+                <h3><i class="fas fa-user-friends"></i> Manage Customers</h3>
+            </div>
+            
+            <div class="container border rounded shadow my-4 p-5">
+                <h3><i class="fas fa-cogs"></i> Setup Administrator</h3>
             </div>
         </div>
     </section>
@@ -68,9 +122,9 @@
 
 
 
-	<script src="script/bootstrap.bundle.min.js"></script>
-	<script src="script/fontawesome.js"></script>
-	<script src="script/script.js"></script>
+	<script type="text/javascript" src="./script/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="./script/fontawesome.js"></script>
+	<script type="text/javascript" src="./script/script.js"></script>
     </body>
 
 </html>

@@ -60,13 +60,13 @@
         <h3><i class="fas fa-receipt"></i>  View Transaction Receipt</h3> <br>
         <div class="container-float shadow border rounded p-5">
             <?php
-                $customer = $_SESSION['detail'];
-
-                $getdata2 = "SELECT * FROM transaction WHERE transaction_id=".$_REQUEST['id'];
+                $getdata = "SELECT * FROM transaction WHERE transaction_id=".$_REQUEST['id'];
+                $data = $conn -> query($getdata);
+                $transaction = $data->fetch_assoc();
+                    
+                $getdata2 = "SELECT * FROM customer WHERE customer_id=".$transaction['customer_id'];
                 $data2 = $conn -> query($getdata2);
-                $transaction = $data2->fetch_assoc();
-                    
-                    
+                $customer = $data2->fetch_assoc();
                     
                 if ($transaction['customer_id'] == $_SESSION['name']) {
                     echo "

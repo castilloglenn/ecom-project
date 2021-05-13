@@ -72,7 +72,7 @@
 		<div class="container mt-5">
 			<div class="card-group text-center">
 				<div class="card">
-					<img src="img/products/glenn-t.png" class="mx-auto" alt="Glenn T-Shirt" width=75%>
+					<img src="img/products/glenn-t.png" class="m-auto" alt="Glenn T-Shirt" width=75%>
 					<div class="card-footer">
 						<h5 class="card-title">I Love Programming Tee</h5>
 						<h5 class="card-title">₱300.00</h5>
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<div class="card">
-					<img src="img/products/seb-t.png" class="mx-auto" alt="Sebastian T-Shirt" width=75%>
+					<img src="img/products/seb-t.png" class="m-auto" alt="Sebastian T-Shirt" width=75%>
 					<div class="card-footer">
 						<h5 class="card-title">RAM Provider Iron Golem Tee</h5>
 						<h5 class="card-title">₱300.00</h5>
@@ -94,7 +94,7 @@
 					</div>
 				</div>
 				<div class="card">
-					<img src="img/products/p-ernest-t.png" class="mx-auto" alt="Ernest T-Shirt" width=75%>
+					<img src="img/products/p-ernest-t.png" class="m-auto" alt="Ernest T-Shirt" width=75%>
 					<div class="card-footer">
 						<h5 class="card-title">Lipunan Tee (Purple)</h5>
 						<h5 class="card-title">₱300.00</h5>
@@ -112,7 +112,7 @@
 		<div class="container mt-5">
 			<div class="card-group text-center">
 				<div class="card">
-					<img src="img/products/b-ernest-t.png" class="mx-auto" alt="Ernest T-Shirt" width=75%>
+					<img src="img/products/b-ernest-t.png" class="m-auto" alt="Ernest T-Shirt" width=75%>
 					<div class="card-footer">
 						<h5 class="card-title">Lipunan Tee (Black)</h5>
 						<h5 class="card-title">₱300.00</h5>
