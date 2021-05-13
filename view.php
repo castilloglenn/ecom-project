@@ -65,56 +65,65 @@
                 $getdata2 = "SELECT * FROM transaction WHERE transaction_id=".$_REQUEST['id'];
                 $data2 = $conn -> query($getdata2);
                 $transaction = $data2->fetch_assoc();
-            ?>
-            <h5><b><i class="fas fa-hashtag"></i> Transaction Number: <?php echo $_REQUEST['id']; ?></b></h5>
-            <p class="m-0">
-                We will contact your transaction status and updates using your contact number
-                <b>(<?php echo $customer['contact_no']; ?>)</b>, you can do a follow-up of your transaction by sending email at 
-                <b>mail@pulsebytes.com</b>, if you are registered at our website, you can see the
-                status of your transactions/orders by visiting your account dashboard. Here are 
-                the details of your transaction: <hr>
-                <b><i class="fas fa-shipping-fast"></i> Shipping Details</b>
-                    <p class="ms-4 mb-0"><b>Full Name:</b> <?php echo $customer['name']; ?></p>
-                    <p class="ms-4 mb-0"><b>Full Address:</b> <?php echo $customer['address']; ?></p>
-                    <p class="ms-4 mb-0"><b>Contact Number:</b> <?php echo $customer['contact_no']; ?></p>
-                    <p class="ms-4 mb-0"><b>Mode of Payment:</b> <?php echo $transaction['payment_option']; ?></p>
-                <hr>
-                <b><i class="fas fa-list-ul mb-3"></i> List of Products</b>
-                <div class="container">
-                <?php echo "
-                    <table class=\"table table-striped border justify-content-center align-items-center text-center\">
-                        <thead>
-                            <tr>
-                                <th scope=\"col\">Quantity</div>
-                                <th scope=\"col\">Product Name</div>
-                                <th scope=\"col\">Price</div>
-                                <th scope=\"col\">Sub-total</div>
-                            </tr>
-                        </thead>
-                        <tbody>";
-                $getcart = $conn->query("SELECT product_id, quantity FROM contain WHERE transaction_id=".$_REQUEST['id']);
-                $totalview = 0;
-                while ($row = $getcart->fetch_assoc()) {
-                    $getproduct = $conn->query("SELECT * FROM product WHERE product_id=".($row['product_id']));
-                    $product = $getproduct->fetch_assoc();
+                    
+                    
+                    
+                if ($transaction['customer_id'] == $_SESSION['name']) {
                     echo "
-                        <tr>
-                            <td>".$row['quantity']."</td>
-                            <td>".$product['name']."</td>
-                            <td>&#x20b1 ".number_format($product['price'], 2, '.', ',')."</td>
-                            <td>&#x20b1 ".number_format(($product['price'] * $row['quantity']), 2, '.', ',')."</td>
-                        </tr>";
-                    $totalview = $totalview + ($product['price'] * $row['quantity']);
+                    <h5><b><i class=\"fas fa-hashtag\"></i> Transaction Number: ".$_REQUEST['id']."</b></h5>
+                    <p class=\"m-0\">
+                        We will contact your transaction status and updates using your contact number
+                        <b>(".$customer['contact_no'].")</b>, you can do a follow-up of your transaction by sending email at 
+                        <b>mail@pulsebytes.com</b>, if you are registered at our website, you can see the
+                        status of your transactions/orders by visiting your account dashboard. Here are 
+                        the details of your transaction: <hr>
+                        <b><i class=\"fas fa-shipping-fast\"></i> Shipping Details</b>
+                            <p class=\"ms-4 mb-0\"><b>Full Name:</b> ".$customer['name']."</p>
+                            <p class=\"ms-4 mb-0\"><b>Full Address:</b> ".$customer['address']."</p>
+                            <p class=\"ms-4 mb-0\"><b>Contact Number:</b> ".$customer['contact_no']."</p>
+                            <p class=\"ms-4 mb-0\"><b>Mode of Payment:</b> ".$transaction['payment_option']."</p>
+                        <hr>
+                        <b><i class=\"fas fa-list-ul mb-3\"></i> List of Products</b>
+                        <div class=\"container\">";
+                    echo "
+                        <table class=\"table table-striped border justify-content-center align-items-center text-center\">
+                            <thead>
+                                <tr>
+                                    <th scope=\"col\">Quantity</div>
+                                    <th scope=\"col\">Product Name</div>
+                                    <th scope=\"col\">Price</div>
+                                    <th scope=\"col\">Sub-total</div>
+                                </tr>
+                            </thead>
+                            <tbody>";
+                    $getcart = $conn->query("SELECT product_id, quantity FROM contain WHERE transaction_id=".$_REQUEST['id']);
+                    $totalview = 0;
+                    while ($row = $getcart->fetch_assoc()) {
+                        $getproduct = $conn->query("SELECT * FROM product WHERE product_id=".($row['product_id']));
+                        $product = $getproduct->fetch_assoc();
+                        echo "
+                            <tr>
+                                <td>".$row['quantity']."</td>
+                                <td>".$product['name']."</td>
+                                <td>&#x20b1 ".number_format($product['price'], 2, '.', ',')."</td>
+                                <td>&#x20b1 ".number_format(($product['price'] * $row['quantity']), 2, '.', ',')."</td>
+                            </tr>";
+                        $totalview = $totalview + ($product['price'] * $row['quantity']);
+                    }
+                    echo "    <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td><b>Total</b></td>
+                                    <td><b>&#x20b1 ".number_format($totalview, 2, '.', ',')."</b></td>
+                                </tr>
+                            </tbody>
+                        </table>";
+                } else {
+                    echo "
+                        <center><h3>You do not have the permission to access.</h3></center>
+                    ";
                 }
-                echo "    <tr>
-                                <td></td>
-                                <td></td>
-                                <td><b>Total</b></td>
-                                <td><b>&#x20b1 ".number_format($totalview, 2, '.', ',')."</b></td>
-                            </tr>
-                        </tbody>
-                    </table>";
-                ?>
+            ?>
                 </div>
             </p>
         </div>

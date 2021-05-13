@@ -119,3 +119,9 @@ foreach ($data as $d) {
     $stmt -> bind_param("sssd", $name, $image, $description, $price);
     $stmt -> execute();
 }
+
+// Administrator's account
+$admin = $conn->query(
+    "INSERT INTO customer 
+    VALUES (100, 'admin', '".password_hash("admin", PASSWORD_DEFAULT).
+        "', 'admin', 'admin', 'admin', 'admin')");

@@ -24,8 +24,13 @@ if (password_verify($_POST['pass'], $result['password'])) {
     $qty = $total->fetch_assoc();
     $_SESSION['cart'] = $qty['SUM(quantity)'];
 
-    header("Location: ../dashboard.php", TRUE, 301);
-    die();
+    if ($_SESSION['name'] == 100) {
+        header("Location: ../admin.php", TRUE, 301);
+        die();
+    } else {
+        header("Location: ../dashboard.php", TRUE, 301);
+        die();
+    }
 } else {
     header("Location: ../login.php?lerror=Incorrect username or password", TRUE, 301);
     die();
