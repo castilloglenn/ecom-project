@@ -192,7 +192,7 @@
                     <div style="border-top: 1px solid black; margin-top: 40px; padding-top: 20px;">
                         <center>
                             <p style="margin-bottom: 0;">
-                            By placing your order, You agree to the <b>Terms and Conditions</b> of <b>PulseBytes Merchandise Store.</b>
+                            By placing your order, You agree to the <a href="terms.php"><b>Terms and Conditions</b></a> of <b>PulseBytes Merchandise Store.</b>
                             <b>PulseBytes</b> is an online merchandise store located in the country of Philippines.
                             </p>
                         </center>
